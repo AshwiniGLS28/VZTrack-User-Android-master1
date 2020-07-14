@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    >
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/appbar_layout"-->
+<!--        android:theme="@style/AppTheme.AppBarOverlay">-->
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:background="?attr/colorPrimary"-->
+<!--            app:popupTheme="@style/AppTheme.PopupOverlay"/>-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+  <include layout="@layout/toolbarwithbackbutton"></include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/llradiobtns"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="10dp">
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton
+            android:id="@+id/radiomobilenumber"
+            style="@style/MyTextViewStyleForHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/cardviewbordercolor"
+            android:checked="true"
+            android:text="Mobile"
+            android:textSize="16sp"></vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton>
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/purpose"
+            android:textSize="16sp"
+            android:id="@+id/radiopurpose"
+            android:buttonTint="@color/cardviewbordercolor"
+            style="@style/MyTextViewStyleForHeading"
+            android:layout_weight="1"></vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton>
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinnerpurpose"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/llradiobtns"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/spinnerdropdown"
+        style="@style/spinner_style"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:visibility="gone" />
+
+    <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_gravity="center_vertical"
+       android:gravity="center"
+        android:layout_below="@+id/spinnerpurpose"
+       android:foregroundGravity="center"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/edittext_drawable_ripple_border"
+
+       android:id="@+id/llmobno"
+       android:visibility="visible"
+
+
+       android:layout_height="wrap_content">
+<!--       <com.google.android.material.textfield.TextInputLayout-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_marginRight="40dp"-->
+<!--           style="@style/TextLabel"-->
+
+<!--           android:layout_height="wrap_content">-->
+
+<!--        <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/mobile_no"-->
+<!--            android:id="@+id/txtmobilenoheading"-->
+<!--            style="@style/MyTextViewStyleForSHint"-->
+<!--            ></vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium>-->
+
+           <vztrack.gls.com.vztrack_user.CustumView.CustomEdittextMedium
+               android:id="@+id/editmobno"
+               style="@style/MyTextViewStyleForEdittext"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="5dp"
+
+               android:layout_toLeftOf="@+id/btnaddmobno"
+               android:layout_weight=".8"
+               android:background="@null"
+               android:gravity="center"
+               android:hint="@string/enter_mobile_no"
+               android:inputType="number"
+               android:maxLength="10" />
+<!--       </com.google.android.material.textfield.TextInputLayout>-->
+
+
+        <Button
+           android:layout_width="@dimen/icon_size"
+           android:layout_height="@dimen/icon_size"
+           android:background="@drawable/nw_add"
+           android:layout_alignParentRight="true"
+           android:foregroundGravity="center"
+           android:layout_marginRight="5dp"
+            android:layout_marginTop="7dp"
+           android:gravity="center"
+           android:textColor="#ffffff"
+           android:id="@+id/btnaddmobno"
+           android:onClick="chooseFromContactForPreapproval"
+           android:elevation="5dp"/>
+   </RelativeLayout>
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/txtor"
+        android:visibility="gone"
+    android:layout_below="@+id/llmobno"
+        android:textSize="18sp"
+        android:text="@string/or"></vztrack.gls.com.vztrack_user.CustumView.CustomTextView>
+<!--    <Spinner-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:layout_below="@+id/txtor"-->
+<!--        android:padding="10dp"-->
+<!--        style="@style/spinner_style"-->
+<!--        android:id="@+id/spinnerpurpose" />-->
+<!--    <Spinner-->
+<!--        android:id="@+id/spinnerpurpose"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/txtor"-->
+<!--        android:layout_weight="1"-->
+<!--        android:layout_margin="5dp"-->
+<!--        android:gravity="center_vertical" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llname"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/llmobno"
+        android:orientation="vertical">
+
+<!--        <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/name"-->
+<!--            style="@style/MyTextViewStyleForSHint"-->
+<!--            />-->
+
+        <!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="0.6"-->
+<!--            android:textSize="18sp"-->
+<!--            android:text="@string/name">-->
+
+<!--        </TextView>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout"
+            android:layout_width="match_parent"
+         style="@style/TextLabel"
+            android:layout_height="wrap_content">
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomEdittextMedium
+                android:id="@+id/editname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/entername"
+                android:inputType="text"
+                android:background="@drawable/edittext_bottom_line"
+                style="@style/MyTextViewStyleForEdittext"
+
+
+                android:singleLine="true"
+               >
+
+            </vztrack.gls.com.vztrack_user.CustumView.CustomEdittextMedium>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llname"
+        android:id="@+id/llfromto"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/rlfromdate"
+            android:layout_below="@+id/spinnerpurpose"
+            android:orientation="horizontal"
+            android:foregroundGravity="center"
+            android:visibility="visible"
+
+
+            android:layout_height="wrap_content">
+<!--                   <com.google.android.material.textfield.TextInputLayout-->
+<!--                       android:layout_width="match_parent"-->
+<!--                       android:layout_marginRight="40dp"-->
+<!--                       android:gravity="center"-->
+<!--                       style="@style/TextLabel"-->
+<!--                       android:layout_height="wrap_content">-->
+
+<!--            <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/from"-->
+<!--                android:id="@+id/startdateheading"-->
+<!--                style="@style/MyTextViewStyleForSHint"-->
+<!--               />-->
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/from"
+                android:id="@+id/startdate"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:layout_weight=".4"
+                android:textColor="@color/colorPrimary"
+                />
+
+                       <vztrack.gls.com.vztrack_user.CustumView.CustomEdittextMedium
+                           android:id="@+id/txtfromdate"
+                           style="@style/MyTextViewStyleForEdittext"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_toLeftOf="@+id/txtfrom"
+                           android:layout_weight=".2"
+                           android:background="@drawable/edittext_bottom_line"
+                           android:clickable="true"
+                           android:layout_marginRight="5dp"
+
+                           android:editable="false"
+                           android:textColor="@color/othertext"
+                        />
+<!--                   </com.google.android.material.textfield.TextInputLayout>-->
+
+
+            <Button
+                android:id="@+id/txtfrom"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="@drawable/ic_action_calendar_month"
+                android:layout_alignParentRight="true"
+                android:text="+"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_marginRight="5dp"
+                android:elevation="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rltodate"
+            android:orientation="horizontal"
+            android:layout_below="@+id/spinnerpurpose"
+            android:foregroundGravity="center"
+            android:visibility="visible"
+
+
+            android:layout_height="wrap_content">
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_marginRight="40dp"-->
+<!--                android:gravity="center"-->
+<!--                style="@style/TextLabel"-->
+<!--                android:layout_height="wrap_content">-->
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/to"
+                android:id="@+id/enddateheading"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:layout_toLeftOf="@+id/txttodate"
+                android:layout_weight=".4"
+                android:textColor="@color/colorPrimary"
+                />
+                <vztrack.gls.com.vztrack_user.CustumView.CustomEdittextMedium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:id="@+id/txttodate"
+                    android:editable="false"
+
+                    android:clickable="true"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/othertext"
+
+                    android:background="@drawable/edittext_bottom_line"
+                    style="@style/MyTextViewStyleForEdittext"
+                   />
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+
+            <Button
+                android:id="@+id/txtto"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="@drawable/ic_action_calendar_month"
+                android:layout_alignParentRight="true"
+                android:text="+"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#ffffff"
+                android:elevation="5dp"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomButtonMedium
+        android:id="@+id/btnsave"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        style="@style/BottomButton"
+        android:text="@string/save"
+      />
+
+</RelativeLayout>

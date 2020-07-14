@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="2dp"
+    android:padding="3dp"
+    android:background="@color/colorWhite"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/tvFlatNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="User(F99)"
+                style="@style/MyTextViewStyleForRainbowSubHeading"
+                android:textSize="12sp"/>
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="12 Apr 2018"
+                style="@style/MyTextViewStyleForRainbowSubHeading"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_margin="1dp"
+            android:background="@color/colorView"/>
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/tvComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginLeft="8dp"
+            style="@style/MyTextViewStyleForRainbowSubHeading"
+            android:layout_marginRight="8dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/dark_gray"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

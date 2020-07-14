@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_margin="@dimen/card_margin_top"
+    style="@style/VisitorCardViewStyle"
+    android:background="@drawable/visitorcardborder"
+    app:strokeColor="@color/cardviewbordercolor"
+    app:strokeWidth="1dp"
+    android:id="@+id/secondaryUserCard"
+    >
+
+
+            <RelativeLayout
+                android:id="@+id/layout_secondaryUser"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/headingLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/userHeadingLable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:text="Tenant"
+                       style="@style/MyTextViewStyleForHeading"/>
+
+                    <ImageView
+                        android:id="@+id/deleteSecondaryUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_delete_24px" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/headingLayout"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/viewcolor"
+                    android:paddingTop="10dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:id="@+id/llname"
+
+                    >
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/userNameLable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="0.7"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Name : "
+                      />
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/userHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line"
+                        android:layout_toRightOf="@id/userNameLable"
+                        android:layout_weight="0.3"
+                        android:padding="2dp"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:paddingLeft="5dp"
+                        android:text="Ashwini Koli"/>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/imgLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llname"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="right">
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/emailIdLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:layout_alignParentLeft="true"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Username : "
+                     />
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/userEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/emailIdLabel"
+                        android:layout_weight="0.3"
+                        android:text="ashwinikoli28@gmail.com"
+                        style="@style/MyTextViewStyleForSubHeading"
+                       />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/imgLayout"
+                    android:layout_height="wrap_content">
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/accountStatusLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="0.7"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Status : "
+                        android:layout_below="@id/imgLayout"/>
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/accountStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/accountStatusLabel"
+                        android:layout_weight="0.3"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:text="Verified"
+                        android:layout_below="@id/imgLayout"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

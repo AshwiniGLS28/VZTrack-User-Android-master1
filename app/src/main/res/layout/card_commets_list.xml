@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_margin_top"
+            android:layout_marginBottom="@dimen/card_margin_bottom"
+            android:layout_marginLeft="@dimen/card_margin_left"
+            android:layout_marginRight="@dimen/card_margin_right">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorView"
+                    android:padding="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:text="Mayur"/>
+
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right"
+                        android:text=" 26 Dec 2016"/>
+
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+           <TextView
+               android:id="@+id/tvComment"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:padding="5dp"
+               android:layout_marginTop="2dp"
+               android:layout_marginRight="5dp"
+               android:text="very good service"
+               android:layout_marginLeft="5dp"
+               android:textColor="@android:color/tertiary_text_dark"
+               android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</LinearLayout>

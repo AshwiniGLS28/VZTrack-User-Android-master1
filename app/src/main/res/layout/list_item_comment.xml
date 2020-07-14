@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="2dp"
+    android:padding="3dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="3dp">
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/tvName"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/rounded_button_cardviewshadocolor"
+            android:gravity="center"
+            android:text="A"
+            style="@style/MyTextViewStyleForSubHeading"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/tvFlatNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="User(F99)"
+                style="@style/MyTextViewStyleForSubHeading"
+                android:textSize="12sp"/>
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                style="@style/MyTextViewStyleForSubHeading"
+                android:text="12 Apr 2018"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_margin="1dp"
+            android:background="@color/colorView"/>
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/tvComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          style="@style/MyTextViewStyleForSubHeading"
+            android:textColor="@color/colorPrimary"
+
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+        />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

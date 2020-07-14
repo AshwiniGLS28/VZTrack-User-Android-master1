@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fragmentBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+   <androidx.cardview.widget.CardView
+       android:gravity="center"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginLeft="5dp"
+       android:layout_marginTop="5dp"
+       android:layout_marginRight="5dp"
+       android:layout_marginBottom="50dp"
+       android:layout_weight="1">
+
+      <ListView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:choiceMode="singleChoice"
+          android:divider="@android:color/transparent"
+          android:dividerHeight="0dp"
+          android:layout_marginBottom="80dp"
+          android:id="@+id/menuList" />
+
+   </androidx.cardview.widget.CardView>
+
+   <androidx.cardview.widget.CardView
+       android:layout_gravity="center"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="5dp"
+       android:layout_alignParentBottom="true"
+       android:padding="5dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:orientation="vertical"
+          android:id="@+id/bottombar"
+          android:layout_alignParentBottom="true"
+
+          android:gravity="center">
+<!--         <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--             android:layout_width="match_parent"-->
+<!--             android:layout_height="wrap_content"-->
+<!--             android:layout_marginTop="5dp"-->
+<!--             android:gravity="center"-->
+<!--             style="@style/MyTextViewStyleForHeading"-->
+<!--             android:textColor="@color/colorWhite"-->
+<!--             android:textStyle="bold"-->
+<!--             android:text="App Version"/>-->
+<!--          <TextView-->
+<!--              android:layout_width="match_parent"-->
+<!--              android:layout_height="1dp"-->
+<!--              android:background="@color/gray"/>-->
+
+          <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+              android:id="@+id/version"
+              style="@style/MyTextViewStyleForSubHeading"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="5dp"
+              android:text="VER 25"
+              android:textColor="@color/subtextcolor"
+              android:textStyle="normal" />
+
+
+      </LinearLayout>
+
+   </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

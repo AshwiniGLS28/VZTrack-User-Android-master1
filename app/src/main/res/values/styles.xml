@@ -1,0 +1,315 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="dialogTheme">@style/Theme.AppCompat</item>
+    </style>
+
+    <style name="DialogTheme" parent="android:Theme.Dialog">
+
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+
+        <!-- No backgrounds, titles or window float -->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="animationName" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/animation_on</item>
+        <item name="android:windowExitAnimation">@anim/animation_off</item>
+    </style>
+
+    <style name="animation_id" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/animation_on_id</item>
+        <item name="android:windowExitAnimation">@anim/animation_off_id</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/ripplecolor</item>
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="SwitchButtonStyle">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/floatingColor</item>
+    </style>
+
+    <style name="tab_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_right</item>
+    </style>
+
+    <style name="LibAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@android:color/background_light</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="PickerTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@color/pollcolor</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMaxWidth">0dp</item>
+    </style>
+
+    <style name="SmoothCheckBoxStyle">
+        <item name="color_checked">@color/pollcolor</item>
+        <item name="color_unchecked">@color/ripplecolor</item>
+        <item name="color_unchecked_stroke">@color/cardviewbordercolor</item>
+        <item name="color_tick">@color/tabcolor</item>
+    </style>
+<!--    <style name="FilePickerTheme" parent="LibAppTheme">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="android:background">@color/colorWhite</item>-->
+
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/pollcolor</item>-->
+<!--        <item name="colorAccent">@color/ripplecolor</item>-->
+<!--    </style>-->
+<!--    <style name="spinner_style">-->
+<!--        <item name="android:layout_width">match_parent</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:layout_margin">10dp</item>-->
+<!--        <item name="android:paddingLeft">8dp</item>-->
+<!--        <item name="android:paddingRight">20dp</item>-->
+<!--        <item name="android:paddingTop">5dp</item>-->
+<!--        <item name="android:paddingBottom">5dp</item>-->
+<!--        <item name="android:textSize">16sp</item>-->
+<!--        <item name="android:popupBackground">#DFFFFFFF</item>-->
+<!--        <item name="android:textColor">@color/colorPrimary</item>-->
+
+<!--            <item name="android:background">@drawable/gradient_spinner</item>-->
+
+<!--    </style>-->
+
+    <style name="spinner_style">
+
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/othertext</item>
+
+    </style>
+
+
+
+
+    <!--    styles for new design-->
+
+    <style name="VisitorCardViewStyle" parent="CardView">
+        <item name="cardCornerRadius">6dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="android:strokeColor">@color/cardviewbordercolor</item>
+    </style>
+
+    <style name="MyTextViewStyleForHeading" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/tabcolor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    <style name="MyTextViewStyleForSubHeading" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/subtextcolor</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+    <style name="MyTextViewStyleForRainbowSubHeading" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/othertext</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="MyTextViewStyleForSTooltip" parent="android:Widget.TextView">
+    <item name="android:textColor">@color/othertext</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:textSize">12sp</item>
+</style>
+    <style name="MyTextViewStyleForSHint" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_margin">3dp</item>
+    </style>
+    <style name="MyTextViewStyleForSmallText" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/nwwhite</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="MyTextViewStyleForRippleText" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/ripplecolor</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    <style name="ProfileCardViewStyle" parent="CardView">
+        <item name="cardCornerRadius">6dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="android:strokeColor">@color/cardviewbordercolor</item>
+    </style>
+    <style name="MyTextViewStyleForHeadingWhite" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    <style name="MyTextViewStyleForEdittext" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/othertext</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+<!--    <style name="MyTextViewStyleForEdittext" parent="android:Widget.TextView">-->
+<!--        <item name="android:textColor">@color/colorPrimary</item>-->
+<!--        <item name="android:textColorHint">@color/gray</item>-->
+<!--        <item name="android:textSize">16sp</item>-->
+<!--        <item name="android:padding">2dp</item>-->
+<!--    </style>-->
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/ripplecolor</item>
+        <item name="colorControlNormal">@color/othertext</item>
+        <item name="colorControlActivated">@color/othertext</item>
+        <item name="android:textColor">@color/othertext</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MyTextViewStyleForButton" parent="android:Widget.Button">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    <style name="MyTextViewStyleForSDrawer" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/ripplecolor</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="MyTextViewStyleForSpinnerdropdown" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/subtextcolor</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    <style name="MyTextViewStyleForHeadingWithwhitetext" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="Theme.MyTheme" parent="Theme.AppCompat.Light">
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorAccent">@color/ripplecolor</item>
+
+        <!-- You can also set colorControlNormal, colorControlActivated
+             colorControlHighlight, and colorSwitchThumbNormal. -->
+
+    </style>
+    <style name="MyTextViewStyleForEdittextripplecolor" parent="android:Widget.TextView">
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="BottomButton" parent="android:Widget.Button">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/ripplecolor</item>
+        <item name="android:textColorSecondary">@color/colorWhite</item>
+    </style>
+    <style name="CustomDialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/ripplecolor</item>
+    </style>
+
+
+    <style name="MyRadioButtonStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/radiobuttonstyle</item>
+    </style>
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/cardviewbordercolor</item>
+        <item name="tabBackground">@color/fragmentBackground</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/colorPrimary</item>
+    </style>
+
+    <!-- for text -->
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/gray</item>
+        <item name="textAllCaps">true</item>
+    </style>
+    <style name="MyTextViewStyleForEdittextLogin" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/othertext</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>

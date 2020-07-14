@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="oval" >
+            <stroke
+                android:color="@color/colorBlack"
+                android:width="1dp"/>
+            <solid
+                android:color="@color/online_green_color"/>
+        </shape>
+    </item>
+    <item
+        android:top="10dp"
+        android:left="10dp"
+        android:bottom="10dp"
+        android:right="10dp"
+        android:drawable="@drawable/call_white">
+    </item>
+</layer-list>

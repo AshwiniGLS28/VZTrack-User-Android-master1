@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nw_login_ng">
+
+    <!--    android:background="@drawable/shalimarloginbg">-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:visibility="invisible"
+            android:id="@+id/loginlayout"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/login_containt"
+                />
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="bottom|right">
+
+                <include  layout="@layout/btn_chat_now"/>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/splash"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:gravity="center"-->
+<!--        android:visibility="visible">-->
+        <!--        android:src="@drawable/user_app_logo"-->
+        <ImageView
+            android:layout_width="100dp"
+            android:id="@+id/imgsplash"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:foregroundGravity="center_horizontal"
+            android:src="@drawable/logo_vz_track"
+
+            android:background="@drawable/white_border_for_logo"/>
+
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textStyle="italic"-->
+<!--            android:textColor="@color/colorWhite"-->
+<!--            android:text="#meetSafe"/>-->
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="50dp"-->
+        <!--            android:textSize="20sp"-->
+        <!--            android:layout_gravity="center|bottom"-->
+        <!--            android:textStyle="italic"-->
+        <!--            android:textColor="@color/colorWhite"-->
+        <!--            android:text="Powerd by VZTrack"/>-->
+<!--    </LinearLayout>-->
+
+</RelativeLayout>

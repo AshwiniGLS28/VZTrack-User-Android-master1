@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.Rainbow_MessageActivity"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:id="@+id/mainLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_keyboard_arrow_left"
+            android:layout_margin="5dp"
+            android:id="@+id/back"
+            android:visibility="gone"
+            android:onClick="goBack"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            app:civ_border_width="1dp"
+            app:civ_border_color="@color/cardviewbordercolor"
+            android:id="@+id/conImg"/>
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/noDpText"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/no_dp1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp">
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/conName"
+                android:maxLines="1"
+                style="@style/MyTextViewStyleForHeading"
+                android:ellipsize="end"
+                android:textColor="#FFFFFF" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtflatno"
+                    android:textColor="#FFFFFF"
+                    style="@style/MyTextViewStyleForSubHeading"
+                    android:gravity="center_vertical"
+                    android:textSize="12sp"/>
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/typeStatusAndOnline"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginLeft="5dp"
+                    style="@style/MyTextViewStyleForSubHeading"
+                    android:gravity="center_vertical"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_close_white_24dp"/>
+
+        <ImageView
+            android:id="@+id/forwardBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="7dp"
+            android:visibility="gone"
+            android:src="@drawable/forward_icon"
+            />
+        <ImageView
+            android:id="@+id/videoCallBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:onClick="makeVideoCall"
+            android:padding="7dp"
+            android:src="@drawable/ic_call_video"
+         />
+<!--        android:background="@drawable/circle-->
+
+        <ImageView
+            android:id="@+id/audioCallBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:onClick="makeAudioCall"
+            android:padding="7dp"
+            android:src="@drawable/ic_call_audio"
+            />
+<!--        android:background="@drawable/circle"-->
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d3d3d3"
+        android:id="@+id/line1"
+        android:visibility="visible"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <include layout="@layout/layout_no_data"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:transcriptMode="alwaysScroll"
+            android:stackFromBottom="true"
+            android:id="@+id/messageScrollView"
+            android:scrollbars="vertical"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/newMessageLL"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/message"
+            android:orientation="horizontal">
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Message"
+                android:id="@+id/newMessage"
+                android:background="@android:color/transparent"
+                android:maxLines="4"
+                android:layout_marginRight="5dp"/>
+
+            <ImageView
+                android:id="@+id/attachFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/ic_attachment"
+                android:onClick="openFileExp"/>
+
+            <ImageView
+                android:id="@+id/attachPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="1dp"
+                android:src="@drawable/ic_camera"
+                android:onClick="openCamera"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/sendMessage"
+            android:background="@drawable/nw_refer"
+            android:onClick="sendMessage"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/uploadingFileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/pollcolor"
+        android:visibility="gone">
+
+       <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            style="@style/MyTextViewStyleForRainbowSubHeading"
+            android:text="Uploading File..."/>
+
+     <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/fileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_weight="1"
+            android:textStyle="italic"
+            style="@style/MyTextViewStyleForRainbowSubHeading"
+            android:maxLines="1"/>
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/uploadPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            style="@style/MyTextViewStyleForRainbowSubHeading"
+            android:textStyle="bold"
+            android:text="10%"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <EditText
+            android:id="@+id/inputCommnet"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:paddingTop="5dp"
+            android:layout_height="60dp"
+            android:maxLength="100"
+            android:layout_weight="1"
+            android:inputType="textCapSentences|textMultiLine"
+            android:gravity="start"
+            android:background="@android:color/transparent"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+            android:hint="@string/comment_to_close_complaint"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorViewLong"/>
+
+<!--        <mehdi.sakout.fancybuttons.FancyButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:paddingBottom="5dp"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:paddingRight="10dp"-->
+<!--            android:paddingTop="5dp"-->
+<!--            fancy:fb_borderColor="#FFFFFF"-->
+<!--            fancy:fb_borderWidth="1dp"-->
+<!--            fancy:fb_defaultColor="@color/colorButton"-->
+<!--            fancy:fb_focusColor="@color/colorBackground"-->
+<!--            android:onClick="Send"-->
+<!--            fancy:fb_radius="3dp"-->
+<!--            fancy:fb_iconPosition="right"-->
+<!--            fancy:fb_text="@string/close"-->
+<!--            fancy:fb_textColor="#FFFFFF"-->
+<!--            android:visibility="visible"/>-->
+
+        <ImageView
+            android:id="@+id/btn_add_Complemt_commnet"
+            android:layout_width="30dp"
+            android:onClick="Send"
+            android:visibility="gone"
+            android:src="@drawable/nw_refer"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorView"
+        android:layout_marginBottom="15dp"/>
+
+</LinearLayout>

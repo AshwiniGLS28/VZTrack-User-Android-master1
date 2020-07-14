@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <include layout="@layout/toolbarwithbackbutton"></include>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/no_photo_icon"
+                    android:layout_marginTop="10dp"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/cardviewbordercolor"
+                    android:gravity="center"
+                    android:id="@+id/imgVisitorPhoto"
+                    android:layout_toLeftOf="@+id/imageView"
+                    android:layout_toStartOf="@+id/imageView" />
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:id="@+id/tvVisitorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/card_main_heading"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:scrollHorizontally="true"
+                    android:marqueeRepeatLimit ="marquee_forever"
+                    android:focusable="true"
+                    style="@style/MyTextViewStyleForHeading"
+                    android:textStyle="bold"
+                    android:focusableInTouchMode="true"
+                    android:singleLine="true"
+                    android:text="Mayur Kumar Mane Saheb"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:orientation="horizontal">
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:gravity="right"
+                        android:textSize="@dimen/card_sub_heading2"
+                        android:text="Mobile No. : "/>
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvMobileNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/card_sub_heading2"
+                        android:text=""/>
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:onClick="Call"
+                        android:visibility="gone"
+                        android:src="@android:drawable/stat_sys_phone_call"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:orientation="horizontal">
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:gravity="center"
+                            android:textSize="17dp"
+                            android:text="Purpose :"/>
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tvPurpose"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorWhite"
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:gravity="center"
+                            android:text="Elecrician"
+
+                            android:ellipsize="marquee"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit ="marquee_forever"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:singleLine="true"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/View1"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/colorWhite" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:orientation="horizontal">
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:text="Date :"/>
+
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:textColor="@color/colorWhite"
+                            android:gravity="center"
+                            android:text="15 Dec 2016"
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:ellipsize="marquee"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit ="marquee_forever"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:weightSum="4"
+                            android:orientation="horizontal">
+                            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textSize="15dp"
+                                android:textColor="@color/tabcolor"
+                                android:textStyle="bold"
+                                style="@style/MyTextViewStyleForSubHeading"
+                                android:text="Quality"/>
+
+
+                            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                android:id="@+id/qualityRating"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-12dp"
+                                android:layout_marginRight="-12dp"
+                                android:rating="0"
+                                android:layout_weight="3"
+                                android:stepSize="1"
+                                app:mrb_progressTint="@color/slide_2"
+                                app:mrb_secondaryProgressTint="@color/slide_2"
+                                style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+                            <ImageView
+                                android:id="@+id/img_qua_happy"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/happysmile"
+                                android:layout_marginRight="-2dp"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:id="@+id/img_qua_sad"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/unhppysmile"
+                                android:layout_marginRight="-2dp"
+                                android:visibility="invisible"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:weightSum="4"
+                            android:padding="1dp"
+                            android:orientation="horizontal">
+
+                            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:textColor="@color/tabcolor"
+                                android:textSize="15dp"
+                                style="@style/MyTextViewStyleForSubHeading"
+                                android:text="Price"
+                                android:textStyle="bold"
+                                android:id="@+id/textView5" />
+
+
+
+
+                            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                android:id="@+id/priceRating"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-12dp"
+                                android:layout_marginRight="-12dp"
+                                android:rating="0"
+                                android:layout_weight="3"
+                                android:stepSize="1"
+                                app:mrb_progressTint="@color/slide_2"
+                                app:mrb_secondaryProgressTint="@color/slide_2"
+                                style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+                            <ImageView
+                                android:id="@+id/img_pri_happy"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/happysmile"
+                                android:layout_marginRight="-2dp"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:id="@+id/img_pri_sad"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/unhppysmile"
+                                android:layout_marginRight="-2dp"
+                                android:visibility="invisible"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:weightSum="4"
+                            android:padding="1dp"
+                            android:orientation="horizontal">
+                            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                style="@style/MyTextViewStyleForSubHeading"
+                                android:textStyle="bold"
+                                android:textColor="@color/tabcolor"
+                                android:text="Punctuality"/>
+
+
+
+                            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                android:id="@+id/punctualityRating"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-12dp"
+                                android:layout_marginRight="-12dp"
+                                android:rating="0"
+                                android:layout_weight="3"
+                                android:stepSize="1"
+                                app:mrb_progressTint="@color/slide_2"
+                                app:mrb_secondaryProgressTint="@color/slide_2"
+                                style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+                            <ImageView
+                                android:id="@+id/img_pun_happy"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/happysmile"
+                                android:layout_marginRight="-2dp"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:id="@+id/img_pun_sad"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/unhppysmile"
+                                android:layout_marginRight="-2dp"
+                                android:visibility="invisible"/>
+
+                        </LinearLayout>
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:textStyle="bold"
+                            android:textColor="@color/tabcolor"
+                            android:text="Write a Review"/>
+                        <EditText
+                            android:id="@+id/etComment"
+                            android:layout_width="match_parent"
+                            android:inputType="textEmailAddress"
+                            android:layout_height="60dp"
+                            android:maxLines="2"
+                            android:padding="3dp"
+                            style="@style/MyTextViewStyleForEdittext"
+                            android:layout_marginTop="10dp"
+                            android:gravity="left"
+                            android:background="@drawable/edittext_background_cardviewcolor"
+                            android:hint="Comment (Optional)"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="10dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1">
+
+                               <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                   android:textColor="@color/colorWhite"
+                                   android:background="@drawable/rounded_button"
+                                   android:textAllCaps="false"
+                                    android:onClick="NotInterested"
+                                   android:text="Skip"
+                                   />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1">
+
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+                                    android:id="@+id/btn_facebook_like"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/rounded_button"
+                                    android:text="SUBMIT"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/colorWhite"
+                                    android:onClick="Submit"
+                                    />
+
+
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

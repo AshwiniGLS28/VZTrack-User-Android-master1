@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/service_provider_background"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:padding="5dp"
+          >
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_providers_list"
+                android:layout_width="match_parent"
+                android:background="@drawable/spinnerdropdown"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+          android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton
+                    android:id="@+id/checkbox_quality"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:buttonTint="@color/cardviewbordercolor"
+                    android:text=" Quality"
+                   />
+
+<!--                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--                    android:id="@+id/tvQuality"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:textColor="@color/colorWhite"-->
+<!--                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--                    android:text="Quality"/>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton
+                    android:id="@+id/checkbox_price"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:buttonTint="@color/cardviewbordercolor"
+                    android:text=" Price"
+                  />
+
+<!--                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--                    android:id="@+id/tvPrice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:textColor="@color/colorWhite"-->
+<!--                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--                    android:text="Price"/>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton
+                    android:id="@+id/checkbox_punctuality"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:buttonTint="@color/cardviewbordercolor"
+                    android:text=" Punctuality"
+                  />
+
+<!--                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--                    android:id="@+id/tvPunctuality"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:textColor="@color/colorWhite"-->
+<!--                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--                    android:text="Punctuality"/>-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/tvNearBySoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:text="Near By Societies"/>
+
+
+        <!--            <Switch-->
+        <!--                android:id="@+id/switch_btn"-->
+        <!--                style="@style/SwitchButtonStyle"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:buttonTint="@color/cardviewbordercolor"-->
+        <!--                android:layout_gravity="center"-->
+        <!--               />-->
+
+        <!--            <io.ghyeok.stickyswitch.widget.StickySwitch-->
+        <!--                android:id="@+id/switch_btn"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="30dp"-->
+        <!--                android:layout_marginTop="2dp"-->
+        <!--                app:ss_animationDuration="400"-->
+        <!--                app:ss_animationType="line"-->
+        <!--                app:ss_iconPadding="2dp"-->
+        <!--                android:layout_marginLeft="15dp"-->
+        <!--                app:ss_iconSize="25dp"-->
+        <!--                android:foregroundGravity="center"-->
+        <!--                android:layout_toRightOf="@id/tenant"-->
+        <!--                app:ss_sliderBackgroundColor="@color/cardviewbordercolor"-->
+        <!--                app:ss_switchColor="@color/othertext"-->
+        <!--                app:ss_textVisibility="gone" />-->
+
+        <Switch
+            android:id="@+id/switch_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="15dp"
+            android:foregroundGravity="center"
+            />
+
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_provider_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/card_margin_top"
+        android:scrollbars="vertical"/>
+
+<!--    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--        android:id="@+id/TvNoProvider"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:gravity="center"-->
+<!--        android:visibility="gone"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--        android:text="No Provider Found !"/>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noImageDataLayout"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:src="@drawable/nodataimage"
+            android:id="@+id/imgnodata"/>
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:text="No Provider Found !"
+            style="@style/MyTextViewStyleForHeading"
+            android:id="@+id/TvNoProvider"/>
+    </LinearLayout>
+
+</LinearLayout>

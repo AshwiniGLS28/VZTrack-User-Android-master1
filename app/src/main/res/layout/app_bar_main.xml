@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="vztrack.gls.com.vztrack_user.activity.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <FrameLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llWelcomeUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+<!--            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--                android:id="@+id/NoDataText"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="25dp"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_gravity="center" />-->
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/NoVistorScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to VZTrack User"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:textColor="@color/gpvch_black"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/noImageDataLayoutmain"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:paddingBottom="15dp"
+                android:src="@drawable/nodataimage"
+                android:id="@+id/imgnodata"/>
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:textColor="@color/gray"
+                android:text="No visitor found"
+                style="@style/MyTextViewStyleForHeading"
+                android:id="@+id/nodatatext"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

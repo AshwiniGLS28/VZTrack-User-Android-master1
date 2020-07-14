@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
+    <include layout="@layout/toolbarwithbackbutton"
+        android:id="@+id/toolbar"></include>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_below="@+id/toolbar"
+    android:layout_marginBottom="45dp"
+    android:background="@color/colorWhite">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/tvAddPhoto"
+                style="@style/MyTextViewStyleForSubHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="Upload File (Max size 5Mb)"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgSelectedImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:onClick="openFile"
+                    android:padding="5dp"
+                    android:src="@drawable/nw_upload"
+                    app:civ_border_color="@color/cardviewbordercolor"
+                    app:civ_border_width="1dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:id="@+id/fileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Upload a file of type image, doc, pdf, ppt, excel"
+                    style="@style/MyTextViewStyleForRippleText"
+                    android:layout_weight="1"
+                    android:maxLines="2"/>
+            </LinearLayout>
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/MyTextViewStyleForSHint"
+                android:text="Notice Heading"/>
+                <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+                    android:id="@+id/input_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="top"
+                    android:background="@drawable/edittext_cardview_shadow_color"
+                    android:maxLength="100"
+                    android:hint="Notice Heading"
+                    android:inputType="textMultiLine"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/counterHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                style="@style/MyTextViewStyleForSDrawer"
+                android:text="0 / max 100"/>
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                style="@style/MyTextViewStyleForSHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notice Description" />
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+                    android:id="@+id/input_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/edittext_cardview_shadow_color"
+                    android:gravity="start"
+                    android:padding="5dp"
+                    android:hint="Notice Description"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLength="5000"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/counterDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:maxLength="1000"
+                style="@style/MyTextViewStyleForSDrawer"
+                android:text="0 / max 5000"/>
+        </LinearLayout>
+</ScrollView>
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomButtonMedium
+        android:id="@+id/btnSent"
+        style="@style/BottomButton"
+        android:onClick="Send"
+        android:layout_alignParentBottom="true"
+        android:text="Send Notice">
+    </vztrack.gls.com.vztrack_user.CustumView.CustomButtonMedium>
+</RelativeLayout>
+
+

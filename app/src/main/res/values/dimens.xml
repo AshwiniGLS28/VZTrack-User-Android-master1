@@ -1,0 +1,33 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="login_screen_margin">5dp</dimen>
+    <dimen name="all_view_height">35dp</dimen>
+    <dimen name="padding_margin">1dp</dimen>
+    <dimen name="text_size">18dp</dimen>
+    <dimen name="text_size_15sp">15sp</dimen>
+
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+<!--    <dimen name="nav_header_height">80p</dimen>-->
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="app_bar_height">220dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="button">55dp</dimen>
+
+    <dimen name="card_margin_top">8dp</dimen>
+    <dimen name="card_margin_bottom">3dp</dimen>
+    <dimen name="card_margin_left">5dp</dimen>
+    <dimen name="card_margin_right">5dp</dimen>
+
+    <dimen name="card_main_heading">20sp</dimen>
+    <dimen name="card_sub_heading1">17sp</dimen>
+    <dimen name="card_sub_heading2">14sp</dimen>
+    <dimen name="card_sub_heading3">11sp</dimen>
+    <dimen name="card_sub_heading4">8sp</dimen>
+
+    <dimen name="message_read_reciept">30dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="icon_size">22dp</dimen>
+
+</resources>

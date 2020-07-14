@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbarwithbackbutton"></include>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgPhoto"
+                    android:layout_width="100dp"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/cardviewbordercolor"
+                    android:layout_height="100dp"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:onClick="ShowPhoto"
+                    android:src="@drawable/ic_avatar_white"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgId"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="5dp"
+                    android:onClick="ShowDocument"
+                    android:src="@drawable/nw_visitor_card"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/etName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                style="@style/MyTextViewStyleForHeading"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="New User"
+              />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:foregroundGravity="center"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/etMobileNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:onClick="Call"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/callcolor"
+                            style="@style/MyTextViewStyleForHeading"
+                            android:text="8956234587"/>
+
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="20dp"-->
+<!--                            android:layout_height="20dp"-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:onClick="Call"-->
+<!--                            android:src="@drawable/ic_phone_call"/>-->
+
+                    </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/nwcolor"
+                    android:layout_height="15dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/card_margin_top"
+            android:orientation="vertical">
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="20dp"-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="@color/colorBlack"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:text="Visit History"/>-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/visitorList_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_margin="2dp"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"/>
+        </LinearLayout>
+</LinearLayout>
+

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation="vertical">-->
+    <com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="@dimen/card_margin_top"
+    android:layout_marginBottom="@dimen/card_margin_top"
+    android:layout_marginRight="@dimen/card_margin_top"
+    style="@style/VisitorCardViewStyle"
+    android:background="@drawable/visitorcardborder"
+    app:strokeColor="@color/cardviewbordercolor"
+    app:strokeWidth="1dp"
+    android:id="@+id/card_view"
+    >
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+            <LinearLayout
+                android:id="@+id/cardview_Linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@color/cardviewbordercolor"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/no_photo_icon" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical">
+
+                            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:singleLine="true"
+                                style="@style/MyTextViewStyleForHeading"
+                                android:text="Name"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                                    android:id="@+id/mobile"
+                                    android:layout_width="wrap_content"
+                                    android:text="hsdhj"
+                                    android:layout_height="wrap_content"
+                                    style="@style/MyTextViewStyleForSubHeading"
+                                    android:textColor="@color/callcolor"
+                                    android:textSize="@dimen/card_sub_heading2" />
+<!--                                <ImageView-->
+<!--                                    android:layout_width="18dp"-->
+<!--                                    android:layout_height="18dp"-->
+<!--                                    android:layout_alignParentLeft="true"-->
+<!--                                    android:paddingTop="3dp"-->
+<!--                                    android:src="@drawable/know_our_maid_call"-->
+<!--                                    android:layout_alignParentBottom="true"/>-->
+                            </LinearLayout>
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                               >
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                    android:id="@+id/purpose"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="gdhs"
+                                    style="@style/MyTextViewStyleForSubHeading"
+                                    />
+
+<!--                                <ImageView-->
+<!--                                    android:layout_width="20dp"-->
+<!--                                    android:layout_height="20dp"-->
+<!--                                    android:layout_alignParentLeft="true"-->
+<!--                                    android:src="@drawable/know_our_maid_call"-->
+<!--                                    android:layout_marginLeft="10dp"-->
+<!--                                    android:layout_alignParentBottom="true"/>-->
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/viewcolor"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:orientation="horizontal">
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/flatNumber"
+                        android:textStyle="bold" />
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/flatNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:text="ngdshgds"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/viewcolor"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                            android:id="@+id/availability"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="left"
+                                            style="@style/MyTextViewStyleForSubHeading"
+                                            android:maxLines="1"/>
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/dateTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="hdhj"
+                        android:gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:maxLines="1"/>
+                </LinearLayout>
+
+
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:layout_marginTop="2dp"-->
+<!--                    android:layout_marginBottom="2dp"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:layout_marginRight="5dp"-->
+<!--                    android:background="@color/colorView"/>-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginRight="5dp"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:layout_marginBottom="2dp"-->
+<!--                    android:layout_marginTop="2dp"-->
+<!--                    android:orientation="horizontal">-->
+<!--                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--                        android:id="@+id/availability"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:gravity="left"-->
+<!--                        android:textColor="@color/colorSmallText"-->
+<!--                        android:maxLines="1"/>-->
+<!--                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--                        android:id="@+id/dateTime"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:gravity="right"-->
+<!--                        android:textColor="@color/colorSmallText"-->
+<!--                        android:maxLines="1"/>-->
+<!--                </LinearLayout>-->
+            </LinearLayout>
+<!--        </RelativeLayout>-->
+</com.google.android.material.card.MaterialCardView>
+<!--</LinearLayout>-->

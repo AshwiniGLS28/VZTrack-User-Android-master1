@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:focusableInTouchMode="true"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="2dp">
+
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:gravity="center"
+            android:layout_height="90dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/group_profile_photo"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:foregroundGravity="center"
+                android:layout_margin="5dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/cardviewbordercolor"
+                android:background="@drawable/no_photo_icon"
+                android:padding="15dp" />
+
+            <TextView
+                android:id="@+id/noImgText"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/no_dp1"
+                android:gravity="center"
+                android:text="SP"
+                android:textColor="#ffffff"
+                android:textSize="50dp"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:onClick="editProfilePhoto"
+                android:src="@drawable/btn_edit_profile_photo"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+<!--        <View-->
+<!--            android:layout_width="1dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginLeft="1dp"-->
+<!--            android:background="@color/cyan_color"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:layout_margin="2dp"
+               >
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/group_name"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/colorPrimary"
+                    style="@style/MyTextViewStyleForSubHeading"
+                    android:layout_margin="2dp"/>
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+                    android:id="@+id/tvGroupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:padding="3dp"
+
+                    style="@style/MyTextViewStyleForSubHeading"
+                    android:background="@drawable/edittext_drawable_ripple_border"
+                    android:layout_margin="2dp"
+                    android:hint="Enter Group Name"/>
+
+            </LinearLayout>
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@color/cyan_color"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:layout_margin="2dp"
+                >
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/group_description"
+                    style="@style/MyTextViewStyleForSubHeading"
+                    android:layout_margin="2dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_weight="0.6"/>
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+                    android:id="@+id/tvGroupDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:padding="3dp"
+                    android:textFontWeight="1"
+                    android:background="@drawable/edittext_drawable_ripple_border"
+                    android:layout_margin="2dp"
+
+                    style="@style/MyTextViewStyleForSubHeading"
+                    android:hint="Enter Group Description"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/nwcolor"
+        android:id="@+id/viewGroup"
+        android:layout_below="@id/layout_group_name"
+        android:layout_height="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="2dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Select contact to add in group"
+            android:layout_margin="2dp"
+            android:inputType="textCapCharacters"
+            android:visibility="gone"/>
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/tvSelectedContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:text="Group Participents : 21"
+            android:textStyle="italic"
+            android:textColor="@color/pollcolor"
+            style="@style/MyTextViewStyleForSubHeading"
+            android:gravity="right"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contactRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    </androidx.recyclerview.widget.RecyclerView>
+
+<!--    <mehdi.sakout.fancybuttons.FancyButton-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:paddingTop="10dp"-->
+<!--        android:paddingBottom="10dp"-->
+<!--        fancy:fb_defaultColor="@android:color/holo_green_light"-->
+<!--        fancy:fb_focusColor="@android:color/holo_green_dark"-->
+<!--        android:onClick="CreateGroup"-->
+<!--        fancy:fb_radius="2dp"-->
+<!--        fancy:fb_text="Create Group"-->
+<!--        fancy:fb_textColor="#FFFFFF"-->
+<!--        android:visibility="gone"/>-->
+<!--    -->
+    <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+
+        android:id="@+id/btnCreateGroup"
+        android:text="Create Group"
+
+        android:onClick="CreateGroup"
+        android:visibility="gone"
+        style="@style/BottomButton">
+
+    </vztrack.gls.com.vztrack_user.CustumView.CustomButton>
+
+
+</LinearLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout   android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/toolbarwithbackbutton"/>
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite">
+
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailIdLabel"
+        android:text="Email Id : "
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        style="@style/MyTextViewStyleForSHint"
+        android:layout_alignParentLeft="true"/>
+
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+        android:id="@+id/emailIDSecondaryUser"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:maxLines="1"
+        android:layout_below="@+id/emailIdLabel"
+        android:maxLength="50"
+        style="@style/MyTextViewStyleForEdittextripplecolor"
+        android:hint="Enter email id"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/edittext_bottom_line"      />
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameLabel"
+        android:text="Name : "
+        android:layout_weight="1"
+        android:layout_below="@+id/emailIDSecondaryUser"
+        style="@style/MyTextViewStyleForSHint"
+        android:layout_alignParentLeft="true"/>
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+        android:id="@+id/nameSecondaryUser"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:maxLines="1"
+        android:maxLength="50"
+        android:layout_below="@+id/nameLabel"
+        android:inputType="textCapWords"
+        android:hint="Enter name"
+        style="@style/MyTextViewStyleForEdittextripplecolor"
+        android:background="@drawable/edittext_bottom_line"/>
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+        android:id="@+id/counterUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="5dp"
+        android:gravity="right"
+        android:text="0 / max 50"
+        android:layout_below="@+id/nameSecondaryUser"
+        style="@style/MyTextViewStyleForSTooltip"
+        android:textColor="@color/ripplecolor"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/llswitch"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/counterUser"
+        android:orientation="vertical">
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameLabel"
+            android:text="Type : "
+            android:layout_weight="1"
+            android:layout_below="@+id/emailIDSecondaryUser"
+            style="@style/MyTextViewStyleForSHint"
+            android:layout_alignParentLeft="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/llradiobtns"
+            android:layout_below="@+id/toolbar"
+            android:layout_margin="10dp">
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton
+                android:id="@+id/radiotenant"
+                style="@style/MyTextViewStyleForHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/cardviewbordercolor"
+                android:checked="false"
+                android:text="Tenant"
+                android:textSize="16sp"></vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton>
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Family Member"
+                android:textSize="16sp"
+                android:id="@+id/radiofamilymember"
+                android:buttonTint="@color/cardviewbordercolor"
+                style="@style/MyTextViewStyleForHeading"
+                android:layout_weight="1"></vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/spinnerLayoutAddUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/llswitch"
+        android:padding="5dp">
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+            android:id="@+id/featureAccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyTextViewStyleForSubHeading"
+            android:textColor="@color/colorPrimary"
+            android:text="Feature Access:"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+       <vztrack.gls.com.vztrack_user.CustumView.CustomCheckbox
+           android:id="@+id/isFeatureAccess"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="15dp"
+           android:buttonTint="@color/cardviewbordercolor"
+           android:textColor="@color/colorPrimary"/>
+
+       <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+           android:id="@+id/featureName"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           style="@style/MyTextViewStyleForSubHeading"
+           android:text="Invoice"/>
+   </LinearLayout>
+    </LinearLayout>
+
+<!--    <mehdi.sakout.fancybuttons.FancyButton-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginLeft="15dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:paddingBottom="9dp"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:paddingRight="10dp"-->
+<!--        android:paddingTop="9dp"-->
+<!--        fancy:fb_borderColor="#FFFFFF"-->
+<!--        fancy:fb_borderWidth="1dp"-->
+<!--        fancy:fb_defaultColor="@color/colorButton"-->
+<!--        fancy:fb_focusColor="@color/colorBackground"-->
+<!--        fancy:fb_radius="2dp"-->
+<!--        fancy:fb_text=""-->
+<!--        fancy:fb_textColor="#FFFFFF" />-->
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+        style="@style/BottomButton"
+        android:onClick="addUser"
+        android:id="@+id/btnAddUser"
+        android:layout_alignParentBottom="true"
+        android:text="@string/addaccount"
+        />
+
+
+
+</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/image_background"
+    android:layout_margin="10dp"
+    android:weightSum="4"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvNameAndNumber"
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="ABC"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/card_main_heading"
+        android:layout_height="0dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit ="marquee_forever"
+        android:focusable="true"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:scrollHorizontally="true"/>
+
+
+    <vztrack.gls.com.vztrack_user.widget.ZoomImageView
+        android:id="@+id/imgImage"
+        android:background="@drawable/image_background"
+        android:layout_width="match_parent"
+        android:layout_weight="3.5"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+
+
+</LinearLayout>

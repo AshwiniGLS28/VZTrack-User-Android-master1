@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/content_preapproval_list" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/idshowpreaaproval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:background="@color/colorPrimary"
+        android:layout_margin="@dimen/fab_margin"
+        app:rippleColor="@color/ripplecolor"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorWhite"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_alignParentTop="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/group_profile_photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="2dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/cardviewbordercolor"
+                android:background="@drawable/no_photo_icon"
+                android:onClick="ShowGroupProfilePhoto"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/noImgText"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/no_dp1"
+                android:gravity="center"
+                android:text="SP"
+                android:textColor="#ffffff"
+                android:textSize="50dp"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:onClick="editProfilePhoto"
+                android:src="@drawable/btn_edit_profile_photo" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/heading">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+
+              >
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/group_name"
+                    android:textColor="@color/colorPrimary"
+                    style="@style/MyTextViewStyleForSubHeading"
+                    android:layout_weight="0.7"
+                    android:layout_margin="2dp"/>
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+                    android:id="@+id/groupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:padding="3dp"
+                    android:layout_margin="2dp"
+                    android:hint="Enter Group Name"
+                    style="@style/MyTextViewStyleForEdittext"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:maxLength="100"
+                    android:background="@drawable/edittext_drawable_ripple_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                >
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/group_description"
+                    style="@style/MyTextViewStyleForSubHeading"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_margin="2dp"
+                    android:layout_weight="0.7"/>
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+                    android:id="@+id/groupDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.3"
+                    android:padding="3dp"
+                    style="@style/MyTextViewStyleForEdittext"
+                    android:hint="Enter Group Description"
+                    android:gravity="start"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100"
+                    android:background="@drawable/edittext_drawable_ripple_border"/>
+            </LinearLayout>
+
+        </LinearLayout>
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/gray"/>-->
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/nwcolor"
+        android:id="@+id/viewGroup"
+            android:layout_below="@id/layout_group_name"
+        android:layout_height="15dp"/>
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_margin="1dp"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_marginBottom="2dp"-->
+<!--            android:background="@color/gray"-->
+<!--            android:id="@+id/viewGroup"-->
+<!--            android:layout_below="@id/layout_group_name"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:id="@+id/selectGroupCount"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_below="@id/viewGroup">
+
+<!--            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="0.4"-->
+<!--                style="@style/MyTextViewStyleForSubHeading"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:text="Select contact to add in group"-->
+<!--               />-->
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/tvSelectedContacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="Selected 9/100"
+                android:textStyle="italic"
+                android:textSize="15sp"
+                android:textColor="@color/pollcolor"
+                android:gravity="right"/>
+
+        </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/selectGroupCount"
+        android:id="@+id/contactRecyclerViewNew"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="64dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/selectGroupCount">-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="0dp"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/contactRecyclerView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+<!--            </androidx.recyclerview.widget.RecyclerView>-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/contactRecyclerViewAdmin"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/contactRecyclerView"-->
+<!--                android:layout_marginBottom="35dp">-->
+<!--            </androidx.recyclerview.widget.RecyclerView>-->
+<!--        </RelativeLayout>-->
+<!--    </ScrollView>-->
+
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/loadingContacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Loading Contacts..."
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+
+<!--        <mehdi.sakout.fancybuttons.FancyButton-->
+<!--            android:id="@+id/btnCreateGroup"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:onClick="CreateGroup"-->
+<!--            android:paddingTop="10dp"-->
+<!--            android:paddingBottom="10dp"-->
+<!--            fancy:fb_defaultColor="@android:color/holo_green_light"-->
+<!--            fancy:fb_focusColor="@android:color/holo_green_dark"-->
+<!--            fancy:fb_radius="2dp"-->
+<!--            fancy:fb_text="Create Group"-->
+<!--            fancy:fb_textColor="#FFFFFF"-->
+<!--            android:layout_alignParentBottom="true"/>-->
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+        android:layout_width="match_parent"
+        android:id="@+id/btnCreateGroup"
+        style="@style/BottomButton"
+        android:text="Create Group"
+        android:layout_alignParentBottom="true"
+
+        android:onClick="CreateGroup"
+       >
+
+    </vztrack.gls.com.vztrack_user.CustumView.CustomButton>
+    </RelativeLayout>
+

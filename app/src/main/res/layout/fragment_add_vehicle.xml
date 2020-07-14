@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@color/nwcolor"
+        android:orientation="horizontal">
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+            android:id="@+id/vehicleNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background_other"
+            style="@style/MyTextViewStyleForEdittextripplecolor"
+            android:inputType="textCapCharacters"
+            android:layout_margin="5dp"
+
+            android:hint="Enter Vehicle Number "
+            android:padding="5dp"
+            android:layout_weight="0.2"/>
+
+        <io.ghyeok.stickyswitch.widget.StickySwitch
+            android:id="@+id/vehicleTypeSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:layout_centerInParent="true"
+            app:ss_animationDuration="400"
+            app:ss_iconPadding="2dp"
+            app:ss_iconSize="30dp"
+            android:layout_weight="0.4"
+            app:ss_textVisibility="gone"
+            app:ss_leftIcon="@drawable/ic_action_bike"
+            app:ss_rightIcon="@drawable/ic_action_car"
+            app:ss_sliderBackgroundColor="@color/colorViewLong"
+            app:ss_switchColor="@color/colorWhite"
+            app:ss_animationType="line"/>
+
+
+<!--        <mehdi.sakout.fancybuttons.FancyButton-->
+<!--            android:id="@+id/btnAddButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            fancy:fb_borderColor="#3b5998"-->
+<!--            fancy:fb_borderWidth="1dp"-->
+<!--            fancy:fb_defaultColor="#FFFFFF"-->
+<!--            fancy:fb_focusColor="#5577bd"-->
+<!--            fancy:fb_radius="5dp"-->
+<!--            fancy:fb_text="Add"-->
+<!--            fancy:fb_textColor="#3b5998"-->
+<!--            fancy:fb_fontIconSize="15sp"-->
+<!--            fancy:fb_iconPosition="right"/>-->
+        <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+            android:layout_width="match_parent"
+            android:id="@+id/btnAddButton"
+            android:background="@drawable/btn_drawablle_withminborder"
+            android:text="@string/add"
+            android:layout_weight="0.4"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorWhite"
+            android:layout_height="35dp"/>
+
+    </LinearLayout>
+
+<!--    <View-->
+<!--        android:id="@+id/View1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginBottom="1dp"-->
+<!--        android:layout_below="@+id/tvPurpose"-->
+<!--        android:background="@color/colorViewLong"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="17sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="My Vehicles"/>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:padding="5dp"-->
+<!--        android:background="@color/blue_btn_bg_color"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="left"-->
+<!--            android:textStyle="bold"-->
+<!--            android:visibility="invisible"-->
+<!--            android:text="Vehicle Type"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="left"-->
+<!--            android:textStyle="bold"-->
+<!--            android:text="Vehicle Number"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="left"-->
+<!--            android:textStyle="bold"-->
+<!--            android:text="Delete"/>-->
+
+
+<!--    </LinearLayout>-->
+
+    <ListView
+        android:id="@+id/vehicle_List"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/card_margin_top"
+        android:divider="@null"
+       >
+    </ListView>
+
+<!--    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--        android:id="@+id/no_Data"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="No vehicle added yet"-->
+<!--        android:visibility="gone"/>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noImageDataLayout"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:paddingBottom="15dp"
+            android:src="@drawable/nodataimage"
+            android:id="@+id/imgnodata"/>
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="@color/gray"
+            android:text="No vehicle added yet"
+            style="@style/MyTextViewStyleForHeading"
+            android:id="@+id/no_Data"/>
+    </LinearLayout>
+
+
+</LinearLayout>

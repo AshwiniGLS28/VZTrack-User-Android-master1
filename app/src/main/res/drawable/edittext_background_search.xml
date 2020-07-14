@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="10dp">
+        <!--        <your original background; can be <bitmap> or <shape> or whatever./>-->
+
+<shape >
+    <solid android:color="#ffffff" />
+
+    <stroke
+        android:width="1dip"
+        android:color="@color/cardviewbordercolor" />
+
+    <corners
+        android:radius="3dp" />
+<!--    <padding-->
+<!--        android:left="5dp"-->
+<!--        android:right="5dp"-->
+<!--        android:top="1dp"-->
+<!--        android:bottom="1dp"/>-->
+
+</shape>
+    </item>
+</layer-list>

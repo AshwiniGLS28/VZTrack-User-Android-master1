@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:id="@+id/card_view_chat"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="5dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        style="@style/VisitorCardViewStyle"-->
+<!--        android:background="@drawable/visitorcardborder"-->
+<!--        app:strokeColor="@color/cardviewbordercolor"-->
+<!--        app:strokeWidth="1dp">-->
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+        android:id="@+id/tvChat"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_margin="10dp"
+        style="@style/MyTextViewStyleForHeading"
+        android:gravity="center"
+        android:clickable="true"
+        android:background="@drawable/rounded_button_ripplecolor"
+
+        android:textColor="@color/colorWhite"
+        android:text="Chat Now"/>
+
+<!--    </com.google.android.material.card.MaterialCardView>-->
+
+</LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/card_margin_top"
+        android:layout_marginRight="@dimen/card_margin_top"
+        android:layout_marginBottom="@dimen/card_margin_top"
+        android:layout_marginTop="@dimen/card_margin_top"
+        style="@style/VisitorCardViewStyle"
+        android:background="@drawable/visitorcardborder"
+        app:strokeColor="@color/cardviewbordercolor"
+        app:strokeWidth="1dp"
+        android:id="@+id/card_view"
+        >
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/card_view"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="@dimen/card_margin_top"-->
+<!--        android:layout_marginBottom="@dimen/card_margin_bottom"-->
+<!--        android:layout_marginLeft="@dimen/card_margin_left"-->
+<!--        android:layout_marginRight="@dimen/card_margin_right"-->
+<!--        app:cardElevation="5dp">-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/messageText"
+            style="@style/MyTextViewStyleForSubHeading"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:autoLink="web|email|phone"
+            android:linksClickable="true"
+            android:textColorLink="@color/link_color"
+            android:text="kgfd oaf oasf foias oasf oasbk jasdd oasa soias oasd asoiiddbas duoasdb asudbausd oaiusd aosiddb asoid d 9876543210"
+             />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/messageHeader"
+            android:weightSum="2"
+            android:layout_below="@+id/messageText"
+            android:orientation="horizontal">
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/sentBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sent By : prafulla.R.Raut prafulla.R.Raut Prafulla.R.raut"
+                style="@style/MyTextViewStyleForSubHeading"
+                android:gravity="left"
+                android:width="200dp"
+                />
+            <!--            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:id="@+id/readBy"-->
+            <!--                android:text="Read By : 2744/200"-->
+            <!--                android:layout_weight="1"-->
+            <!--                style="@style/MyTextViewStyleForSubHeading"-->
+            <!--                android:layout_alignParentRight="true"/>-->
+        </RelativeLayout>
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 AUG 2019"
+            android:layout_below="@id/messageHeader"
+            android:id="@+id/sentDate"
+            style="@style/MyTextViewStyleForSubHeading"
+            />
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/readBy"
+            android:text="Read By : 2744/200"
+            android:layout_weight="1"
+            android:layout_below="@id/messageHeader"
+            style="@style/MyTextViewStyleForSubHeading"
+            android:layout_alignParentRight="true"/>
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:background="#d3d3d3"-->
+<!--            android:layout_below="@id/sentDate"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:id="@+id/line"/>-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/sentDate">
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sentTo"
+                android:gravity="left"
+                android:foregroundGravity="center"
+                android:textColor="@color/othertext"
+                android:clickable="false"
+                style="@style/MyTextViewStyleForSubHeading"
+                android:layout_marginRight="30dp"
+                android:textSize="12sp"
+                android:text="kjaha, sdfg, sd,f ,sdf ,sdff ,sdf ,sdf ,werf wefkjaha, sdfg, sd,f ,sdf ,sdff ,sdf ,sdf ,werf wef"/>
+            <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="@drawable/next_msg"
+                android:layout_alignParentRight="true"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:padding="1dp"
+                android:id="@+id/viewBtn"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

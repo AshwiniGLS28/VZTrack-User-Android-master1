@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorView"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="VZTrack\nNew Visitor"
+        android:textSize="20sp"
+        android:fontFamily="@string/font_family_black"
+        android:gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/visitor_photo"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:padding="15dp"
+            android:src="@drawable/contact"/>
+
+        <TextView
+            android:id="@+id/visitor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:text="Mahesh Moti"
+            android:textSize="20sp"
+            android:fontFamily="@string/font_family_medium"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/view_visitor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="View"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@android:color/holo_green_light"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="Close"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@android:color/holo_red_light"
+            android:textColor="@color/colorWhite"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

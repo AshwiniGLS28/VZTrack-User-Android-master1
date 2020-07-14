@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="300dp"-->
+    <!--        android:layout_height="320dp"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:layout_marginLeft="10dp"-->
+    <!--        android:layout_marginRight="10dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:layout_marginBottom="20dp"-->
+    <!--        android:background="@drawable/edittext_background_other">-->
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+        android:id="@+id/flatNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:foregroundGravity="center"
+        style="@style/MyTextViewStyleForHeading"
+        android:text="@string/text_reason_to_close"/>
+
+    <RadioGroup
+        android:id="@+id/adCloseReason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton
+            android:id="@+id/radioOption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPrimary"
+            android:buttonTint="@color/cardviewbordercolor"
+            android:text="@string/ad_close_reason1"
+            android:textSize="@dimen/card_sub_heading1"/>
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton
+            android:id="@+id/radioOption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPrimary"
+            android:buttonTint="@color/cardviewbordercolor"
+            android:text="@string/ad_close_reason2"
+            android:textSize="@dimen/card_sub_heading1"/>
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton
+            android:id="@+id/radioOption3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPrimary"
+            android:buttonTint="@color/cardviewbordercolor"
+            android:text="@string/ad_close_reason3"
+            android:textSize="@dimen/card_sub_heading1"/>
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomRadioButton
+            android:id="@+id/radioOption4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPrimary"
+            android:buttonTint="@color/cardviewbordercolor"
+            android:text="@string/ad_close_reason4"
+            android:textSize="@dimen/card_sub_heading1"/>
+
+    </RadioGroup>
+
+    <!--        <mehdi.sakout.fancybuttons.FancyButton-->
+    <!--            android:id="@+id/btn_close_ad"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            android:layout_marginLeft="5dp"-->
+    <!--            android:layout_marginRight="5dp"-->
+    <!--            android:layout_marginBottom="5dp"-->
+    <!--            android:paddingBottom="9dp"-->
+    <!--            android:paddingLeft="10dp"-->
+    <!--            android:paddingRight="10dp"-->
+    <!--            android:paddingTop="9dp"-->
+    <!--            fancy:fb_borderColor="#FFFFFF"-->
+    <!--            fancy:fb_borderWidth="1dp"-->
+    <!--            fancy:fb_defaultColor="@color/colorButton"-->
+    <!--            fancy:fb_focusColor="@color/colorBackground"-->
+    <!--            fancy:fb_radius="2dp"-->
+    <!--            fancy:fb_text="Close this ad"-->
+    <!--            fancy:fb_textColor="#FFFFFF" />-->
+
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+        android:id="@+id/btn_close_ad"
+        android:text="Close this ad"
+        style="@style/BottomButton"
+        android:background="@drawable/rounded_button"
+        />
+
+
+
+    <!--    </LinearLayout>-->
+
+
+
+</LinearLayout>

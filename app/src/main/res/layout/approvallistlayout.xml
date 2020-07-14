@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:background="@color/colorWhite"
+    android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/VisitorCardViewStyle"
+        android:layout_marginLeft="@dimen/card_margin_top"
+        android:layout_marginRight="@dimen/card_margin_top"
+        android:layout_marginBottom="@dimen/card_margin_top"
+        android:background="@drawable/visitorcardborder"
+        app:strokeColor="@color/cardviewbordercolor"
+        app:strokeWidth="1dp"
+        android:id="@+id/card_view"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:orientation="vertical"
+            >
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtheading"
+                style="@style/MyTextViewStyleForHeading"
+                android:text="jkhdkjs"
+                android:gravity="center_vertical"/>
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtsubheading"
+                android:text="jkhdkjs"
+                style="@style/MyTextViewStyleForSubHeading"
+                android:layout_below="@id/txtheading"
+                android:gravity="center_vertical"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/txtsubheading"
+                >
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+                   <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="0.8"
+                       style="@style/MyTextViewStyleForRainbowSubHeading"
+                       android:text="From : " />
+                   <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="left"
+                       android:gravity="left"
+                       android:layout_weight="0.2"
+                       style="@style/MyTextViewStyleForRainbowSubHeading"
+                       android:text="jkhdkjs"
+                       android:layout_below="@+id/txtsubheading"
+                       android:id="@+id/txtstartdate">
+
+                   </vztrack.gls.com.vztrack_user.CustumView.CustomTextView>
+
+               </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        style="@style/MyTextViewStyleForRainbowSubHeading"
+                        android:text="To : " />
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        style="@style/MyTextViewStyleForRainbowSubHeading"
+                        android:layout_weight="0.2"
+                        android:layout_gravity="right"
+                        android:layout_below="@+id/txtstartdate"
+                        android:text="jkhdkjs"
+                        android:id="@+id/txtenddate"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_toLeftOf="@+id/imgdelete"
+                android:src="@drawable/ic_edit"
+                android:gravity="center"
+                android:padding="1dp"
+                android:visibility="visible"
+                android:layout_alignParentBottom="true"
+                android:clickable="true"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/ideditaapproval"/>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="5dp"
+                android:text="Invitee"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:visibility="visible"
+                android:src="@drawable/ic_delete_24px"
+                android:clickable="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/imgdelete"/>
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

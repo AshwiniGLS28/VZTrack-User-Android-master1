@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:weightSum="4">
+    <include layout="@layout/toolbarwithbackbutton"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <!--***********  password Layout-->
+        <RelativeLayout
+            android:id="@+id/layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/password_background"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!--            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginBottom="10dp"-->
+                <!--                android:gravity="center"-->
+                <!--                android:padding="5dp"-->
+                <!--                android:text="Change Password"-->
+                <!--                android:textSize="16sp"-->
+                <!--                android:textStyle="bold" />-->
+
+                <!--                <com.google.android.material.textfield.TextInputLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginLeft="10dp"-->
+                <!--                    android:layout_marginRight="10dp"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:textColorHint="@color/colorPrimaryDark"-->
+                <!--                    android:visibility="gone"-->
+                <!--                    app:passwordToggleEnabled="true">-->
+
+                <!--                    <EditText-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:hint="Enter Current Password"-->
+                <!--                        android:inputType="textPassword"-->
+                <!--                        android:paddingLeft="@dimen/padding_margin"-->
+                <!--                        android:textColor="@color/colorBlack" />-->
+                <!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                <!--                <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:text="Current Password"-->
+                <!--                    style="@style/MyTextViewStyleForSHint"-->
+                <!--                    android:layout_height="wrap_content"/>-->
+                <!--            <com.google.android.material.textfield.TextInputLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginLeft="10dp"-->
+                <!--                android:layout_marginRight="10dp"-->
+                <!--                android:textColorHint="@color/colorPrimaryDark"-->
+                <!--                app:passwordToggleEnabled="true">-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/ripplecolor">
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomEdittextMedium
+                        android:id="@+id/etPasswordOld"
+                        style="@style/MyTextViewStyleForEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:hint="Current Password"
+                        android:inputType="textPassword"
+                        android:paddingLeft="@dimen/padding_margin"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--                <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:text="New Password"-->
+                <!--                    style="@style/MyTextViewStyleForSHint"-->
+                <!--                    android:layout_height="wrap_content"/>-->
+                <!--            <com.google.android.material.textfield.TextInputLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginLeft="10dp"-->
+                <!--                android:layout_marginRight="10dp"-->
+                <!--                android:textColorHint="@color/colorPrimaryDark"-->
+                <!--                app:passwordToggleEnabled="true">-->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/ripplecolor">
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomEdittextMedium
+                        android:id="@+id/etPasswordNew1"
+                        style="@style/MyTextViewStyleForEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:digits="@string/acceptPasswordChar"
+                        android:hint="New Password"
+                        android:inputType="textPassword"
+                        android:paddingLeft="@dimen/padding_margin"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--            <com.google.android.material.textfield.TextInputLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginLeft="10dp"-->
+                <!--                android:layout_marginRight="10dp"-->
+                <!--                android:textColorHint="@color/colorPrimaryDark"-->
+                <!--                app:passwordToggleEnabled="true">-->
+                <!--                <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:text="Confirm Password"-->
+                <!--                    style="@style/MyTextViewStyleForSHint"-->
+                <!--                    android:layout_height="wrap_content"/>-->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/ripplecolor">
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomEdittextMedium
+                        android:id="@+id/etPasswordNew2"
+                        style="@style/MyTextViewStyleForEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:digits="@string/acceptPasswordChar"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"
+                        android:paddingLeft="@dimen/padding_margin"
+                        android:textSize="18sp"
+                        app:passwordToggleEnabled="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    style="@style/MyTextViewStyleForRippleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="left"
+                    android:padding="2dp"
+                    android:text="@string/passwordMessage" />
+
+
+            </LinearLayout>
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+
+                android:id="@+id/btnChangePassword"
+                style="@style/BottomButton"
+                android:layout_alignParentBottom="true"
+                android:text="Change Password" />
+        </RelativeLayout>
+
+        <!--***********  Notification Layout-->
+        <LinearLayout
+            android:id="@+id/layout_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                        android:layout_marginTop="@dimen/mtrl_card_spacing"
+                        android:layout_marginRight="@dimen/mtrl_card_spacing"
+                        style="@style/VisitorCardViewStyle"
+                        android:background="@drawable/visitorcardborder"
+                        app:strokeColor="@color/cardviewbordercolor"
+                        app:strokeWidth="1dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                                    style="@style/MyTextViewStyleForHeading"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:text="Notification Setting"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+<!--                                <mehdi.sakout.fancybuttons.FancyButton-->
+<!--                                    android:id="@+id/openNotification"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginTop="5dp"-->
+<!--                                    android:paddingBottom="6dp"-->
+<!--                                    android:paddingLeft="8dp"-->
+<!--                                    android:paddingRight="8dp"-->
+<!--                                    android:paddingTop="6dp"-->
+<!--                                    android:layout_margin="5dp"-->
+<!--                                    android:onClick="showChannelSettings"-->
+<!--                                    fancy:fb_borderColor="@android:color/darker_gray"-->
+<!--                                    fancy:fb_borderWidth="1dp"-->
+<!--                                    fancy:fb_defaultColor="@android:color/transparent"-->
+<!--                                    fancy:fb_focusColor="@android:color/holo_blue_light"-->
+<!--                                    fancy:fb_radius="5dp"-->
+<!--                                    fancy:fb_text="@string/open"-->
+<!--                                    fancy:fb_textSize="12sp"-->
+<!--                                    fancy:fb_textColor="@color/ripplecolor" />-->
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/openNotification"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:clickable="true"
+                                    android:onClick="showChannelSettings"
+                                    android:src="@drawable/ic_keyboard_arrow_right" />
+
+
+                            </LinearLayout>
+
+                            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                android:id="@+id/openSettings"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:text="@string/open_setting"
+                                android:textSize="14sp"/>
+
+
+                            <RelativeLayout
+                                android:id="@+id/rel_lay_allow_notification"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:visibility="gone">
+
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Allow Notification"
+                                    android:textSize="15sp" />
+
+                                <androidx.appcompat.widget.AppCompatCheckBox
+                                    android:id="@+id/notification_checkbox"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:checked="true" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rel_lay_sound"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:visibility="gone">
+
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification Sound"
+                                    android:textSize="15sp" />
+
+                                <androidx.appcompat.widget.AppCompatCheckBox
+                                    android:id="@+id/notification_sount_checkbox"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:checked="true" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rel_lay_vibrate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:visibility="gone">
+
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification Vibration"
+                                    android:textSize="15sp" />
+
+                                <androidx.appcompat.widget.AppCompatCheckBox
+                                    android:id="@+id/notification_vibration_checkbox"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:checked="true" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                        android:layout_marginTop="@dimen/mtrl_card_spacing"
+                        android:layout_marginRight="@dimen/mtrl_card_spacing"
+                        style="@style/VisitorCardViewStyle"
+                        android:background="@drawable/visitorcardborder"
+                        app:strokeColor="@color/cardviewbordercolor"
+                        app:strokeWidth="1dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="@string/noti_acc_text"
+                                    style="@style/MyTextViewStyleForHeading"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+<!--                                <mehdi.sakout.fancybuttons.FancyButton-->
+<!--                                    android:id="@+id/openNotificationAccess"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_margin="5dp"-->
+<!--                                    android:layout_marginTop="5dp"-->
+<!--                                    android:onClick="showNotificationAccess"-->
+<!--                                    android:paddingLeft="8dp"-->
+<!--                                    android:paddingTop="6dp"-->
+<!--                                    android:paddingRight="8dp"-->
+<!--                                    android:paddingBottom="6dp"-->
+<!--                                    fancy:fb_borderColor="@android:color/darker_gray"-->
+<!--                                    fancy:fb_borderWidth="1dp"-->
+<!--                                    fancy:fb_defaultColor="@android:color/transparent"-->
+<!--                                    fancy:fb_focusColor="@android:color/holo_blue_light"-->
+<!--                                    fancy:fb_radius="5dp"-->
+<!--                                    fancy:fb_text="@string/open"-->
+<!--                                    fancy:fb_textColor="@color/ripplecolor"-->
+<!--                                    fancy:fb_textSize="12sp" />-->
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/openNotificationAccess"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:onClick="showNotificationAccess"
+                                    android:src="@drawable/ic_keyboard_arrow_right" />
+
+                            </LinearLayout>
+
+                            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:text="@string/notification_access"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                        android:layout_marginTop="@dimen/mtrl_card_spacing"
+                        android:layout_marginRight="@dimen/mtrl_card_spacing"
+                        style="@style/VisitorCardViewStyle"
+                        android:background="@drawable/visitorcardborder"
+                        app:strokeColor="@color/cardviewbordercolor"
+                        app:strokeWidth="1dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="left"
+                                    android:padding="5dp"
+                                    android:text="@string/open_app_settings"
+                                    style="@style/MyTextViewStyleForHeading"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+<!--                                <mehdi.sakout.fancybuttons.FancyButton-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_margin="5dp"-->
+<!--                                    android:layout_marginTop="5dp"-->
+<!--                                    android:onClick="openAppSettings"-->
+<!--                                    android:paddingLeft="8dp"-->
+<!--                                    android:paddingTop="6dp"-->
+<!--                                    android:paddingRight="8dp"-->
+<!--                                    android:paddingBottom="6dp"-->
+<!--                                    fancy:fb_borderColor="@android:color/darker_gray"-->
+<!--                                    fancy:fb_borderWidth="1dp"-->
+<!--                                    fancy:fb_defaultColor="@android:color/transparent"-->
+<!--                                    fancy:fb_focusColor="@android:color/holo_blue_light"-->
+<!--                                    fancy:fb_radius="5dp"-->
+<!--                                    fancy:fb_text="@string/open"-->
+<!--                                    fancy:fb_textColor="@color/ripplecolor"-->
+<!--                                    fancy:fb_textSize="12sp" />-->
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:onClick="openAppSettings"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/ic_keyboard_arrow_right" />
+                            </LinearLayout>
+
+                            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="1"
+                                android:text="@string/app_settings"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/toneCard"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                        android:layout_marginTop="@dimen/mtrl_card_spacing"
+                        android:layout_marginRight="@dimen/mtrl_card_spacing"
+                        style="@style/VisitorCardViewStyle"
+                        android:background="@drawable/visitorcardborder"
+                        app:strokeColor="@color/cardviewbordercolor"
+                        app:strokeWidth="1dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:onClick="customeNotificationSound"
+                                android:orientation="horizontal">
+
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Notification Sound"
+                                    style="@style/MyTextViewStyleForHeading"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                    android:id="@+id/ringtoneTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:text="Default"
+                                    android:textColor="@color/ripplecolor"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/ic_keyboard_arrow_right" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                        android:layout_marginTop="@dimen/mtrl_card_spacing"
+                        android:layout_marginRight="@dimen/mtrl_card_spacing"
+                        style="@style/VisitorCardViewStyle"
+                        android:background="@drawable/visitorcardborder"
+                        app:strokeColor="@color/cardviewbordercolor"
+                        app:strokeWidth="1dp"
+                        android:id="@+id/phoneRingtoneCard"
+
+                        >
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="left"
+                                    android:padding="5dp"
+                                    style="@style/MyTextViewStyleForHeading"
+                                    android:text="@string/use_ringtone_as_visitor_tone"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatCheckBox
+                                    android:id="@+id/use_ringtone_checkbox"
+                                    android:layout_width="wrap_content"
+                                    android:textColorHint="@color/cardviewbordercolor"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/selectedPhoneRingtoneLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center_vertical"
+                                android:onClick="NotificationRingtone"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp">
+
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                    android:id="@+id/selectedPhoneRingtoneTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:textColor="@color/ripplecolor"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/ic_keyboard_arrow_right" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/customized_notifiction_layout"
+
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                            android:layout_marginTop="@dimen/mtrl_card_spacing"
+                            android:layout_marginRight="@dimen/mtrl_card_spacing"
+                            style="@style/VisitorCardViewStyle"
+                            android:background="@drawable/visitorcardborder"
+                            app:strokeColor="@color/cardviewbordercolor"
+                            app:strokeWidth="1dp"
+
+                            >
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:onClick="setNotification"
+                                android:orientation="horizontal">
+
+                                <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="left"
+                                    style="@style/MyTextViewStyleForHeading"
+                                    android:padding="5dp"
+                                    android:text="Customized Notification"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_keyboard_arrow_right" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <!--***********  Profile Layout-->
+        <LinearLayout
+            android:id="@+id/layout_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="0.7"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circleProfleView"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_avatar"
+                            app:civ_border_color="@color/cardviewbordercolor"
+                            app:civ_border_width="1dp" />
+
+                        <ImageView
+                            android:id="@+id/imgcapturephoto"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:onClick="browsePhoto"
+                            android:clickable="true"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginLeft="28dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/btn_edit_profile_photo" />
+                    </FrameLayout>
+<!--                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:padding="5dp"-->
+<!--                        android:text="@string/appInfo"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                            android:id="@+id/socORcompanyName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:text="Society Name : "
+                            style="@style/MyTextViewStyleForHeading"/>
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tv_soc_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Rucha"
+                         style="@style/MyTextViewStyleForSubHeading"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:text="Owner Name : "
+                            style="@style/MyTextViewStyleForHeading" />
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tv_owner_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="MAHESH"
+                            style="@style/MyTextViewStyleForSubHeading"
+                          />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                            android:id="@+id/flatNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:textSize="14sp"
+                            android:text="House Number : "
+                            style="@style/MyTextViewStyleForHeading" />
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tv_flat_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="F11"
+                            style="@style/MyTextViewStyleForSubHeading"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/secondaryUserNameLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Name  "
+                            android:textStyle="bold"
+                            style="@style/MyTextViewStyleForHeading"
+                            android:textSize="14sp"/>
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Ashwini"
+                            style="@style/MyTextViewStyleForSubHeading" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:gravity="left"
+                            android:text="Username : "
+                            style="@style/MyTextViewStyleForHeading" />
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="R152F11"
+                            style="@style/MyTextViewStyleForSubHeading"/>
+
+                    </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:gravity="center"
+                     android:visibility="visible"
+                     android:id="@+id/llemailid"
+                     android:orientation="vertical">
+                     <com.google.android.material.card.MaterialCardView
+                         xmlns:android="http://schemas.android.com/apk/res/android"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         xmlns:app="http://schemas.android.com/apk/res-auto"
+                         android:layout_marginLeft="5dp"
+                         android:layout_marginTop="5dp"
+                         android:layout_marginRight="5dp"
+                         style="@style/VisitorCardViewStyle"
+                         android:background="@drawable/visitorcardborder"
+                         app:strokeColor="@color/cardviewbordercolor"
+                         app:strokeWidth="1dp"
+                         android:id="@+id/card_view">
+                         <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center_vertical"
+
+                             android:gravity="center_vertical"
+                             android:orientation="horizontal">
+
+                             <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                                 style="@style/MyTextViewStyleForSubHeading"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginLeft="10dp"
+                                 android:layout_marginRight="10dp"
+                                 android:gravity="left"
+                                 android:padding="5dp"
+                                 android:text="Email"
+                                 android:textColor="@color/colorPrimary" />
+                             <TextView
+                                 android:layout_width="1dp"
+                                 android:layout_height="match_parent"
+                                 android:background="@color/viewcolor"/>
+
+                             <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+                                 android:id="@+id/emailId"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="40dp"
+                                 android:background="@null"
+                                 android:hint="@string/enterEmail"
+                                 android:layout_marginLeft="5dp"
+                                 android:layout_gravity="center_vertical"
+                                 android:gravity="center_vertical"
+                                 android:layout_marginRight="5dp"
+                                 android:inputType="textEmailAddress"
+                                 style="@style/MyTextViewStyleForEdittext" />
+                         </LinearLayout>
+                     </com.google.android.material.card.MaterialCardView>
+
+                     <LinearLayout
+                         android:id="@+id/noteInProfile"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:gravity="left"
+                         android:orientation="horizontal"
+                         android:visibility="visible">
+
+                         <TextView
+                             android:id="@+id/note"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="7dp"
+                             android:layout_marginRight="7dp"
+                             android:layout_weight="1"
+                             android:gravity="right"
+                             android:text="You can use your email Id to login"
+                             android:textColor="@color/ripplecolor"
+                             android:textStyle="italic" />
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/emailIdLinearLayout"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:layout_marginTop="5dp"
+                         android:layout_marginRight="10dp"
+                         android:gravity="left"
+                         android:orientation="horizontal"
+                         android:visibility="gone">
+
+                         <androidx.appcompat.widget.AppCompatCheckBox
+                             android:id="@+id/checkEmail"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_alignParentTop="true"
+                             android:layout_alignParentEnd="true"
+                             android:layout_alignParentRight="true"
+                             android:checked="false"
+                             android:text="@string/useMyEmail" />
+
+                     </LinearLayout>
+
+                     <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+                         android:id="@+id/btnAddEmail"
+                         style="@style/BottomButton"
+                         android:layout_width="150dp"
+                         android:onClick="AddEmail"
+                         android:text="@string/addEmail"
+
+                         />
+                 </LinearLayout>
+
+                </LinearLayout>
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+        </LinearLayout>
+
+        <!--***********  SecondaryUser Layout-->
+        <RelativeLayout
+            android:id="@+id/layout_acct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/colorWhite"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/secondaryUser_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="10.0sp"
+                android:padding="8dip"
+                android:clipToPadding="false"
+              >
+            </ListView>
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                android:id="@+id/noAccountLabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No Accounts\nFound"
+                style="@style/MyTextViewStyleForHeading"
+                android:visibility="gone" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addUserBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_add"
+                android:visibility="visible"
+                app:backgroundTint="@color/colorPrimary" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

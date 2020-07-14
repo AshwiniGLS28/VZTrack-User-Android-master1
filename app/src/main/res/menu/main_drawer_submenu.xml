@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_search_provider"
+            android:icon="@drawable/ic__search"
+            android:title="Search Provider"/>
+
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_star_border_black_24dp"
+            android:title="Service Feedback"/>
+
+        <item
+            android:id="@+id/nav_back"
+            android:icon="@drawable/ic_keyboard_arrow_left"
+            android:title="Back To Menu"/>
+
+    </group>
+
+</menu>

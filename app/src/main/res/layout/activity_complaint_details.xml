@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activity.ComplaintDetails">
+
+   <LinearLayout
+       android:id="@+id/llMainLinearLayout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       <include layout="@layout/toolbarwithbackbutton"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:padding="2dp"
+          android:layout_weight="1">
+
+         <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <de.hdodenhof.circleimageview.CircleImageView
+                           android:id="@+id/img_complaint"
+                           android:layout_width="70dp"
+                           android:layout_height="70dp"
+                           android:layout_marginLeft="5dp"
+                           android:layout_marginTop="5dp"
+                           android:layout_marginRight="5dp"
+                           android:layout_marginBottom="5dp"
+                           android:onClick="ShowPhoto"
+                           android:src="@drawable/no_photo_icon"
+                           app:civ_border_color="@color/cardviewbordercolor"
+                           app:civ_border_width="1dp" />
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+                           <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                               android:id="@+id/tvCategory"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:singleLine="true"
+                               android:text="Other"
+                               android:layout_marginRight="5dp"
+                               android:layout_marginLeft="5dp"
+
+                               android:layout_marginBottom="10dp"
+                               style="@style/MyTextViewStyleForHeading"
+                               android:textStyle="bold" />
+
+                           <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                               android:id="@id/tvDescription"
+                               style="@style/MyTextViewStyleForSubHeading"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginLeft="5dp"
+                               android:layout_marginRight="5dp"
+                               android:inputType="textCapSentences|textMultiLine"
+                               android:scrollHorizontally="true"
+                               android:textColor="#666666"
+                               android:textSize="15sp" />
+                       </LinearLayout>
+                   </LinearLayout>
+
+
+                  <LinearLayout
+                      android:id="@+id/dateLayout"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginRight="5dp"
+                      android:layout_marginLeft="5dp"
+                      android:gravity="center_vertical"
+                      android:orientation="horizontal">
+
+                      <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                          style="@style/MyTextViewStyleForSubHeading"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="0.5"
+                          android:text="@string/select_estimated_date"
+                          android:textColor="@color/colorPrimary" />
+
+                      <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:id="@+id/closedate">
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+                            android:id="@+id/tvClosedDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:background="@drawable/edittext_bottom_line"
+
+                            android:textStyle="bold"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/imgCalender"
+                            android:layout_width="@dimen/icon_size"
+                            android:layout_height="@dimen/icon_size"
+                            android:onClick="showDatePicker"
+                            android:src="@drawable/ic_action_calendar_month" />
+                    </LinearLayout>
+                  </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:visibility="visible"
+                     android:orientation="vertical">
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="2dp"
+                         android:id="@+id/llreopeneddate"
+                         android:visibility="gone"
+
+                         android:layout_marginRight="5dp"
+                         android:layout_marginLeft="5dp"
+                         android:orientation="horizontal">
+                         <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                             android:layout_width="match_parent"
+                             android:layout_weight="1"
+                             android:layout_height="wrap_content"
+                             android:textColor="@color/colorPrimary"
+                             style="@style/MyTextViewStyleForSubHeading"
+                             android:text="Reopened Date :"/>
+                         <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                             android:layout_width="match_parent"
+                             android:layout_weight="1"
+                             android:id="@+id/txtreopeneddate"
+
+                             style="@style/MyTextViewStyleForSubHeading"
+                             android:layout_height="wrap_content"
+                             android:text="hhj"/>
+                     </LinearLayout>
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="2dp"
+                         android:layout_marginRight="5dp"
+                         android:id="@+id/llreopenedcomment"
+                         android:visibility="gone"
+                         android:layout_marginLeft="5dp"
+                         android:orientation="horizontal">
+                         <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                             android:layout_width="match_parent"
+                             android:layout_weight="1"
+                             android:textColor="@color/colorPrimary"
+                             android:layout_height="wrap_content"
+                             style="@style/MyTextViewStyleForSubHeading"
+                             android:text="Reopened Reason :"/>
+                         <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                             android:layout_width="match_parent"
+                             android:layout_weight="1"
+                             android:id="@+id/txtreopenedreason"
+                             style="@style/MyTextViewStyleForSubHeading"
+                             android:layout_height="wrap_content"
+                             android:text="gjgg"/>
+                     </LinearLayout>
+                 </LinearLayout>
+                  <View
+                      android:layout_width="match_parent"
+                      android:layout_height="10dp"
+                      android:layout_marginBottom="10dp"
+                      android:layout_marginTop="5dp"
+                      android:background="@color/nwcolor"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginRight="5dp"
+                   android:layout_marginLeft="5dp"
+                   android:orientation="vertical">
+                  <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="5dp"
+                      style="@style/MyTextViewStyleForHeading"
+                      android:text="@string/write_comment"
+                      android:textColor="@color/colorPrimary"
+                      android:textSize="16sp"
+                      android:textStyle="bold" />
+<!--                   <com.google.android.material.textfield.TextInputLayout-->
+<!--                       android:id="@+id/text_input_layout"-->
+<!--                       android:layout_width="match_parent"-->
+<!--                       style="@style/TextLabel"-->
+<!--                       android:layout_height="wrap_content">-->
+
+                  <vztrack.gls.com.vztrack_user.CustumView.CustomEdittextMedium
+                      android:id="@id/tvComment"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:editable="false"
+                      android:background="@drawable/edittext_cardview_shadow_color"
+                      android:hint="@string/write_comment_here"
+                      style="@style/MyTextViewStyleForEdittext"
+                      android:maxLength="100"
+                      android:textSize="13sp"
+                      android:onClick="ShowBottomSheetDialog"/>
+<!--                   </com.google.android.material.textfield.TextInputLayout>-->
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:layout_marginRight="5dp"
+                   android:layout_marginLeft="5dp"
+                   android:orientation="vertical"
+                   android:padding="5dp">
+
+                  <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                      android:id="@+id/tvCommentCount"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="2dp"
+                      style="@style/MyTextViewStyleForHeading"
+                      android:textSize="16sp"
+                      android:text="@string/comment"
+                      android:textStyle="bold" />
+
+                  <androidx.recyclerview.widget.RecyclerView
+                      android:id="@+id/comment_recycler_view"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:scrollbars="vertical"
+                      android:layout_margin="2dp"/>
+
+                  <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                      android:id="@+id/tvNoComment"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:text="@string/no_comment"
+                      style="@style/MyTextViewStyleForHeading"
+                      android:gravity="center"
+                      android:visibility="gone"/>
+
+
+               </LinearLayout>
+
+            </LinearLayout>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+         <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+             android:id="@+id/btnInProgress"
+             android:layout_width="match_parent"
+             android:layout_height="35dp"
+             android:layout_weight="1"
+             android:layout_margin="5dp"
+             android:background="@drawable/rounded_button_ripplecolor"
+             android:gravity="center"
+             style="@style/MyTextViewStyleForSubHeading"
+             android:text="Work In Progress"
+             android:textStyle="bold"
+             android:textColor="@color/colorWhite" />
+
+         <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+             android:id="@+id/btnClose"
+             android:layout_width="match_parent"
+             android:layout_height="35dp"
+             android:layout_weight="1"
+             android:background="@drawable/rounded_button_ripplecolor"
+             android:gravity="center"
+             style="@style/MyTextViewStyleForSubHeading"
+             android:layout_margin="5dp"
+             android:text="Close"
+             android:textStyle="bold"
+             android:textColor="@color/colorWhite" />
+          <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+              android:id="@+id/btnreopen"
+              android:layout_width="match_parent"
+              android:layout_height="35dp"
+              android:layout_weight="1"
+              android:background="@drawable/rounded_button_ripplecolor"
+              android:gravity="center"
+              android:visibility="gone"
+              style="@style/MyTextViewStyleForSubHeading"
+              android:layout_margin="5dp"
+              android:text="Reopen"
+              android:textStyle="bold"
+              android:textColor="@color/colorWhite" />
+      </LinearLayout>
+
+   </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

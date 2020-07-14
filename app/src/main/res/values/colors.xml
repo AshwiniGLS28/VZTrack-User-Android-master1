@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">#2196F3</color>-->
+<!--    <color name="colorPrimaryDark">#1976D2</color>-->
+
+<!--    <color name="colorAccent">#011F4B</color>-->
+    <!-- #FF4081 -->
+    <color name="colorBackground">#2879FE</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorButton">#2196F3</color>
+    <color name="colorView">#E0E0E0</color>
+    <color name="colorViewLong">#B3B3B3</color>
+    <color name="colorSmallText">#01579B</color>
+    <color name="colorBlack">#000000</color>
+    <color name="tint">#f44336</color>
+
+    <color name="slide_1">#4f91ff</color>
+    <color name="slide_2">#fb9c25</color>
+    <color name="slide_3">#5ab55d</color>
+    <color name="slide_4">#ea2d6d</color>
+    <color name="tutorial_buttonTextColor">#000000</color>
+    <color name="colorBorder">#ff9900</color>
+    <color name="floatingColor">#ffa850</color>
+
+    <color name="fragmentBackground">#E8E8E8</color>
+
+    <color name="green_color_shade2">#c5e3ed</color>
+    <color name="green_color_shade1">#b5dbe8</color>
+
+    <color name="online_green_color">#008000</color>
+    <color name="offline">#C0E852</color>
+
+    <color name="add_button_active">#A9C9A4</color>
+    <color name="add_button_disable">#C5E3BF</color>
+
+    <color name="yellow_dark">#cc7722</color>
+    <color name="yellow">#ffff00</color>
+
+    <color name="dark_gray">#708090</color>
+    <color name="gray">#A9A9A9</color>
+
+
+
+<!--    <color name="colorPrimaryPix">#075e54</color>-->
+<!--    <color name="colorPrimaryLightPix">#80075e54</color>-->
+
+    <color name="colorFAB1">#2196F3</color>
+    <color name="green">#5AB55D</color>
+
+    <color name="color_dark_gray">#e6222222</color>
+    <color name="cyan_color">#05d9f7</color>
+    <color name="cyan_color1">#8BC34A</color>
+
+    <color name="red">#FF0000</color>
+
+
+    <color name="link_color">#3366ff</color>
+    <color name="callpurposecolor">#76d5fe</color>
+
+    <color name="nwcolor">#1A19396F</color>
+
+<!--    NEW DESIGN'S COLOR-->
+
+    <color name="colorPrimary">#011F4B</color>
+    <color name="colorPrimaryDark">#011F4B</color>
+    <color name="colorAccent">#011F4B</color>
+    <color name="cardviewbordercolor">#CDDC39</color>
+    <color name="subtextcolor">#434343</color>
+    <color name="nwred">#CCD84911</color>
+<!--    D84911-->
+    <color name="nwwhite">#ffffff</color>
+    <color name="othertext">#666666</color>
+    <color name="transperent">#00000000</color>
+    <color name="ripplecolor">#6497b1</color>
+    <color name="closedby">#E64E3A</color>
+    <color name="tabcolor">#03396C</color>
+    <color name="pollcolor">#b3cde0</color>
+    <color name="rainbowmsgcolor">#005b96</color>
+    <color name="viewcolor">#66CDDC39</color>
+    <color name="callcolor">#03396C</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="aliceblue">#F0F8FF</color>
+</resources>

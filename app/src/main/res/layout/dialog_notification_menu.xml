@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:id="@+id/toolbar"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_keyboard_arrow_left"
+            android:contentDescription="@string/back_image"/>
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/dialogHeading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:layout_marginLeft="10dp"
+            style="@style/MyTextViewStyleForHeading"
+            android:text="Customized Notification"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            />
+    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        -->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_weight="1">-->
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/noticationMenuList"
+            android:dividerHeight="0dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginBottom="56dp"
+            android:divider="#00000000">
+        </ListView>
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginTop="10dp">-->
+
+<!--        <mehdi.sakout.fancybuttons.FancyButton-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:paddingBottom="10dp"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:paddingRight="10dp"-->
+<!--            android:paddingTop="10dp"-->
+<!--            fancy:fb_borderColor="@android:color/background_dark"-->
+<!--            fancy:fb_borderWidth="1dp"-->
+<!--            fancy:fb_defaultColor="@color/colorButton"-->
+<!--            fancy:fb_focusColor="@color/colorPrimary"-->
+<!--            fancy:fb_radius="5dp"-->
+<!--            fancy:fb_text="Save"-->
+<!--            fancy:fb_textColor="@color/colorWhite"/>-->
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+
+            android:id="@+id/btnSaveNotification"
+            android:onClick="saveNotification"
+            android:text="@string/save"
+
+            android:layout_alignParentBottom="true"
+            style="@style/BottomButton">
+
+        </vztrack.gls.com.vztrack_user.CustumView.CustomButton>
+
+
+<!--    </LinearLayout>-->
+</RelativeLayout>

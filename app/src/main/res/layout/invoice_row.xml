@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/card_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardBackgroundColor="@color/red_btn_bg_color"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="@dimen/card_margin_top"-->
+<!--        android:layout_marginBottom="@dimen/card_margin_bottom"-->
+<!--        android:layout_marginLeft="@dimen/card_margin_left"-->
+<!--        android:layout_marginRight="@dimen/card_margin_right">-->
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="@dimen/mtrl_card_spacing"
+    android:layout_marginTop="@dimen/mtrl_card_spacing"
+    android:layout_marginRight="@dimen/mtrl_card_spacing"
+    style="@style/VisitorCardViewStyle"
+    android:background="@drawable/visitorcardborder"
+    app:strokeColor="@color/cardviewbordercolor"
+    app:strokeWidth="1dp"
+    android:id="@+id/card_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Bill-Feb,15"
+                        android:id="@+id/invoice_name"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        style="@style/MyTextViewStyleForHeading"
+                        android:singleLine="true"
+                        android:gravity="center_vertical"/>
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.6"
+                        android:textAllCaps="true"
+                        android:text="Submitted"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:id="@+id/invoice_status"
+                        android:gravity="top|right"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                   >
+
+
+                    <View
+                        android:id="@+id/View1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/tvPurpose"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/viewcolor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Created On : "
+                            android:layout_weight="0.7"
+                            android:textColor="@color/colorPrimary"
+                           style="@style/MyTextViewStyleForRippleText"
+                            android:gravity="center_vertical"/>
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:text="12 Feb 19"
+                            style="@style/MyTextViewStyleForRainbowSubHeading"
+                            android:textColor="@color/dark_gray"
+                            android:id="@+id/created_date"
+                            android:gravity="center_vertical"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bill Date : "
+                            android:textColor="@color/colorPrimary"
+                            android:layout_weight="0.7"
+                            style="@style/MyTextViewStyleForRippleText"
+                            android:gravity="center_vertical"/>
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:text="12 Feb 19"
+                            style="@style/MyTextViewStyleForRainbowSubHeading"
+                            android:textColor="@color/dark_gray"
+                            android:id="@+id/bill_date"
+                            android:gravity="center_vertical"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Due Date : "
+                            android:textColor="@color/colorPrimary"
+                           style="@style/MyTextViewStyleForRippleText"
+                            android:layout_weight="0.7"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center_vertical"/>
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="12 Feb 19"
+                            android:textColor="@color/dark_gray"
+                            android:layout_marginLeft="2dp"
+                            style="@style/MyTextViewStyleForRainbowSubHeading"
+                            android:layout_marginRight="2dp"
+                            android:id="@+id/due_date"
+                            android:layout_weight="0.3"
+                            android:layout_below="@id/invitationType"
+                            android:gravity="center_vertical"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorPrimary"
+
+                            android:layout_marginRight="5dp"
+                            style="@style/MyTextViewStyleForRippleText"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:layout_weight="0.7"
+                            android:text="Amount : "/>
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="0.3"
+                         android:orientation="horizontal">
+                         <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:layout_marginLeft="2dp"
+                             android:textColor="@color/dark_gray"
+                             android:layout_marginRight="2dp"
+                             android:gravity="center_vertical"
+                             android:layout_weight="1"
+                             android:text="30"
+                             style="@style/MyTextViewStyleForRainbowSubHeading"
+                             android:id="@+id/amount"/>
+
+                         <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                             android:id="@+id/btnPay"
+                             style="@style/MyTextViewStyleForRainbowSubHeading"
+                             android:layout_width="46dp"
+                             android:layout_height="match_parent"
+                             android:layout_gravity="center"
+                             android:layout_marginRight="5dp"
+                             android:background="@drawable/rouded_border_for_pay"
+                             android:gravity="center"
+                             android:text="@string/pay"
+                             android:textColor="@color/ripplecolor" />
+<!--                         rouded_border_for_pay-->
+
+
+                         <!--                         <mehdi.sakout.fancybuttons.FancyButton-->
+<!--                             android:id="@+id/btnPay"-->
+<!--                             android:layout_width="wrap_content"-->
+<!--                             android:layout_height="wrap_content"-->
+<!--                             android:paddingBottom="5dp"-->
+<!--                             android:paddingLeft="20dp"-->
+<!--                             android:paddingRight="20dp"-->
+<!--                             android:paddingTop="5dp"-->
+<!--                             fancy:fb_borderColor="#3b5998"-->
+<!--                             fancy:fb_borderWidth="1dp"-->
+<!--                             fancy:fb_defaultColor="#FFFFFF"-->
+<!--                             fancy:fb_focusColor="#5577bd"-->
+<!--                             fancy:fb_fontIconSize="10sp"-->
+<!--                             fancy:fb_iconPosition="right"-->
+<!--                             fancy:fb_radius="5dp"-->
+<!--                             fancy:fb_text="@string/pay"-->
+<!--                             fancy:fb_textColor="#3b5998" />-->
+                     </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:gravity="end">-->
+
+
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="bottom">-->
+
+<!--                       -->
+
+<!--                    </LinearLayout>-->
+
+
+
+
+<!--                </LinearLayout>-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/group_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/cardviewbordercolor"
+                android:id="@+id/group_dp"
+                android:layout_margin="5dp"/>
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/no_dp_text"
+                android:layout_margin="5dp"
+                android:background="@drawable/no_dp1"
+                android:visibility="invisible"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/group_name"
+                android:padding="3dp"
+                android:maxLines="1"
+                style="@style/MyTextViewStyleForHeading"
+                android:ellipsize="end"/>
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/group_desc"
+                android:layout_below="@id/contactName"
+                android:padding="2dp"
+                style="@style/MyTextViewStyleForRainbowSubHeading"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btn_accept"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="2dp"
+                android:padding="5dp"
+                fancy:fb_defaultColor="@android:color/transparent"
+                fancy:fb_focusColor="@color/gray"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="Accept"
+                fancy:fb_fontIconResource="&#xf00c;"
+                fancy:fb_fontIconSize="15dp"
+                fancy:fb_iconPosition="top"
+                fancy:fb_textSize="10sp"
+                fancy:fb_textColor="@color/colorPrimaryDark"
+                android:visibility="visible"/>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btn_reject"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="2dp"
+                android:padding="5dp"
+                fancy:fb_defaultColor="@android:color/transparent"
+                fancy:fb_focusColor="@color/gray"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="Reject"
+                fancy:fb_fontIconResource="&#xf00d;"
+                fancy:fb_fontIconSize="15dp"
+                fancy:fb_iconPosition="top"
+                fancy:fb_textSize="10sp"
+                fancy:fb_textColor="@color/colorPrimaryDark"
+                android:visibility="visible"/>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btn_more_details"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="2dp"
+                android:padding="5dp"
+                fancy:fb_defaultColor="@android:color/transparent"
+                fancy:fb_focusColor="@color/gray"
+                fancy:fb_radius="30dp"
+                fancy:fb_text=""
+                fancy:fb_fontIconResource="&#xf00b;"
+                fancy:fb_fontIconSize="15dp"
+                fancy:fb_iconPosition="top"
+                fancy:fb_textSize="1sp"
+                fancy:fb_textColor="@color/ripplecolor"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/contactDetail"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/viewcolor" />
+</LinearLayout>

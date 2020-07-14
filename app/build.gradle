@@ -1,0 +1,187 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        vztconfig {
+            keyAlias 'giantleapsystem'
+            keyPassword '123456789'
+            storeFile file('C:\\KeyStoreFile\\KeyStoreForVZtrack')
+//           storeFile file('C:\\Project\\VZTrackKeystore\\KeyStoreForVZtrack')
+
+            storePassword '123456789'
+        }
+    }
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "vztrack.gls.com.vztrack_user"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 112
+        versionName "12.1"
+        renderscriptTargetApi 28
+        multiDexEnabled true
+    }
+    buildTypes {
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                def APP = "UA"
+                def SEP = "_"
+                def VERSION_N = "VN"
+                def VERSION_C = "VC"
+                def date = new Date();
+                def formattedDate = date.format('ddMMMyy_HH-mm')
+                outputFileName = "${APP}${SEP}${variant.name}${SEP}${VERSION_N}${variant.versionName}${SEP}${VERSION_C}${variant.versionCode}${SEP}${formattedDate}.apk"
+                // outputFileName = "${APP}${SEP}${variant.name}${SEP}${VERSION_N}${variant.versionName}${SEP}${VERSION_C}${variant.versionCode}${SEP}${formattedDate}.apk"
+            }
+        }
+
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            jniDebuggable false
+            renderscriptDebuggable false
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+            signingConfig signingConfigs.vztconfig
+            buildConfigField "String", "BASE_URL", '"https://www.vztrack.net/VZ-Tracking"'
+            buildConfigField "String", "BASE_URL_FOR_RATING", '"https://www.vztrack.net/VZ_Rating_Prod"'
+            buildConfigField "String", "BASE_IMG_URL", '"https://www.vztrack.net/VZ_data"'
+            buildConfigField "String", "WEB_LINK", '"https://www.vztrack.net/VZ-Tracking/forgotPassword.html"'
+            buildConfigField "String", "RAINBOW_ENVIRONMENT", '"openrainbow.com"'
+            buildConfigField "String", "GARAGE_WORK_IMAGE", '"https://www.vztrack.net/VZ_data/uploads/garage_work/garage_work.webp"'
+
+            resValue 'string', 'clever_tap_id', '"8RZ-4R4-K84Z"'
+            resValue 'string', 'clever_tap_tokan', '"424-12b"'
+        }
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            signingConfig signingConfigs.vztconfig
+            buildConfigField "String", "BASE_URL", '"https://www.vztrack.net/VZ-Tracking"'
+            //buildConfigField "String", "BASE_URL", '"http://52.76.144.181/VZ-Test"'
+            buildConfigField "String", "BASE_URL_FOR_RATING", '"http://52.76.144.181/VZ_Rating"'
+            buildConfigField "String", "BASE_IMG_URL", '"https://www.vztrack.net/VZ_data"'
+            buildConfigField "String", "WEB_LINK", '"http://52.76.144.181/VZ-Test/forgotPassword.html"'
+            buildConfigField "String", "GARAGE_WORK_IMAGE", '"http://52.76.144.181/VZ_data_test/uploads/garage_work/garage_work.webp"'
+
+
+//            buildConfigField "String", "BASE_URL", '"http://192.168.0.29:8080/VZ-Test"'
+//            buildConfigField "String", "BASE_URL_FOR_RATING", '"http://192.168.0.29:8080/VZ_Rating"'
+//            buildConfigField "String", "BASE_IMG_URL", '"http://192.168.0.29:8080/VZ_data_test"'
+//            buildConfigField "String", "WEB_LINK", '"http://192.168.0.29:8080/VZ-Test/forgotPassword.html"'
+//            buildConfigField "String", "GARAGE_WORK_IMAGE", '"http://192.168.0.29:8080/VZ_data_test/uploads/garage_work/garage_work.webp"'
+            buildConfigField "String", "RAINBOW_ENVIRONMENT", '"openrainbow.com"'
+            resValue 'string', 'clever_tap_id', '"TEST-RKW-RKK-494Z"'
+            resValue 'string', 'clever_tap_tokan', '"TEST-332-032"'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+    lintOptions {
+        disable 'RestrictedApi'
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    // Specifies one flavor dimension.
+    flavorDimensions "vz"
+    productFlavors {
+        india {
+            dimension "vz"
+        }
+        kenya {
+            dimension "vz"
+            applicationIdSuffix "kenya"
+        }
+    }
+}
+
+
+allprojects {
+    repositories {
+        maven { url "http://maven.openrainbow.io" }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.8.0@jar'
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.5.0'
+    implementation 'me.zhanghai.android.materialratingbar:library:1.0.2'
+    implementation 'com.kyleduo.switchbutton:library:1.4.4'
+    implementation 'com.javon.viewmanager:viewmanager:1.0.3'
+    implementation 'com.robohorse.gpversionchecker:gpversionchecker:1.0.9'
+    implementation 'com.github.marcoscgdev:HeaderDialog:1.0.1'
+    implementation 'com.wdullaer:materialdatetimepicker:3.1.1'
+    implementation 'com.github.sujithkanna:smileyrating:1.6.5'
+    implementation 'com.ms-square:expandableTextView:0.1.4'
+    implementation 'com.daasuu:BubbleLayout:1.1.1'
+    implementation 'com.github.GwonHyeok:StickySwitch:0.0.13'
+    implementation 'com.github.livechat:chat-window-android:v2.0.0'
+    implementation 'com.thomashaertel:multispinner:0.1.1@aar'
+    implementation 'com.github.medyo:fancybuttons:1.8.3'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.clevertap.android:clevertap-android-sdk:3.3.0'
+    implementation 'org.apache.httpcomponents:httpclient-android:4.3.5.1'
+    implementation('org.apache.httpcomponents:httpmime:4.3') {
+        exclude module: "httpclient"
+    }
+    implementation 'com.github.jkwiecien:EasyImage:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+
+    implementation 'com.ale:rainbowsdk:1.57.0'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'com.fxn769:pix:1.4.4'
+
+
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
+
+    // Whats app like image picker
+    implementation 'com.droidninja:filepicker:2.2.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    //dependecy for custum navigation drawer
+
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.mxn.soul:flowingdrawer-core:2.1.0'
+    ext {
+        supportLibVersion = '2.1.5'
+    }
+
+    //for textinpulayout
+//    implementation 'com.android.support:design:22.2.0'
+    implementation 'com.google.android.material:material:1.0.0-rc01'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '26.0.2'
+            }
+        }
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true

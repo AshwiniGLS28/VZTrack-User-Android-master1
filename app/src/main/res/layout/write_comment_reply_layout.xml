@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:id="@+id/llMainLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+                android:id="@+id/commentText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:inputType="textCapSentences|textMultiLine"
+                android:gravity="start"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                style="@style/MyTextViewStyleForEdittext"
+                android:hint="Write your reply here..."
+                android:maxLength="100"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorViewLong" />
+
+            <ImageView
+                android:id="@+id/btnSend"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/nw_refer"
+                android:layout_gravity="bottom"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/viewcolor"
+            android:layout_marginBottom="2dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp">
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/tvReplyCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                style="@style/MyTextViewStyleForSubHeading"
+
+                android:text="@string/comment"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reply_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:layout_margin="2dp"/>
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/tvNoReply"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/MyTextViewStyleForRainbowSubHeading"
+                android:text="@string/no_reply"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

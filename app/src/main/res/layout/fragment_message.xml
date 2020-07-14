@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/tabs"
+        android:background="@color/colorPrimary"
+        android:weightSum="2">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/receivedTab"
+            android:background="?selectableItemBackground"
+            android:clickable="true">
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="RECEIVED"
+                style="@style/MyTextViewStyleForHeadingWithwhitetext"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:id="@+id/txtrecievedtab"
+                android:background="@color/fragmentBackground"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+               />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/cardviewbordercolor"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/receivedTabIndicator" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/sentTab"
+            android:background="?selectableItemBackground"
+            android:clickable="true">
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="SENT"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                android:background="@color/fragmentBackground"
+                android:id="@+id/tabsent"
+              style="@style/MyTextViewStyleForHeadingWithwhitetext"
+                android:gravity="center"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/cardviewbordercolor"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:id="@+id/sentTabIndicator"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/tabs"
+        android:layout_marginTop="@dimen/card_margin_top"
+        android:id="@+id/receivedPage">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/activity_main_swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/notice_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"/>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <LinearLayout
+                android:id="@+id/NoDataLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+<!--                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="25dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_gravity="center" />-->
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:paddingBottom="15dp"
+                    android:src="@drawable/nodataimage"
+                   />
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/gray"
+                    android:text="No Message To Display"
+
+                    style="@style/MyTextViewStyleForHeading"
+                    android:id="@+id/NoDataText"
+                />
+
+            </LinearLayout>
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:layout_below="@id/tabs"
+        android:layout_marginTop="@dimen/card_margin_top"
+        android:visibility="gone"
+        android:id="@+id/sentPage">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_layout_for_sent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sentMessageList"
+            android:visibility="gone"
+            android:dividerHeight="0dp"
+            android:divider="#00000000"
+            android:paddingBottom="60dp"
+            android:clipToPadding="false">
+
+        </ListView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+<!--        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="No sent\nmessages found"-->
+<!--            android:textSize="30sp"-->
+<!--            android:id="@+id/noSentMsgLabel"/>-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/noImageDataLayout"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:paddingBottom="15dp"
+                android:src="@drawable/nodataimage"
+                android:id="@+id/imgnodata"/>
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:textColor="@color/gray"
+                android:text="No sent\nmessages found"
+                style="@style/MyTextViewStyleForHeading"
+                android:id="@+id/noSentMsgLabel"/>
+        </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/fab_margin"
+            app:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_add"/>
+    </RelativeLayout>
+</RelativeLayout>

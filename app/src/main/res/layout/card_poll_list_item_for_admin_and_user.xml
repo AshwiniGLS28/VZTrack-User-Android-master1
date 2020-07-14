@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/card_margin_left"
+        android:layout_marginTop="@dimen/card_margin_top"
+
+        android:layout_marginRight="@dimen/card_margin_right"
+        style="@style/VisitorCardViewStyle"
+        android:background="@drawable/visitorcardborder"
+        fancy:strokeColor="@color/cardviewbordercolor"
+        android:layout_marginBottom="@dimen/card_margin_bottom"
+        fancy:strokeWidth="1dp"
+        android:id="@+id/cvPollCard"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:padding="3dp">-->
+
+<!--                <View-->
+<!--                    android:id="@+id/viewColorBar"-->
+<!--                    android:layout_width="6dp"-->
+<!--                    android:layout_marginBottom="3dp"-->
+<!--                    android:layout_marginTop="3dp"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@color/colorButton"/>-->
+
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:padding="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tvPollName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="New Poll"
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginRight="5dp"
+                            android:maxLines="2"/>
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tvStatus"
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:layout_width="match_parent"
+                            android:textSize="12sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="0.7"
+                            android:text="status"
+                            android:gravity="right"
+                            android:textAllCaps="true" />
+
+                    </LinearLayout>
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvPollQuestion"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="Have any one" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:orientation="horizontal">
+
+<!--                            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:gravity="left"-->
+<!--                                android:textSize="8sp"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:text="@string/closeDate"-->
+<!--                                android:fontFamily="@string/font_family_light"-->
+<!--                                android:layout_gravity="left"/>-->
+
+                            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                android:id="@+id/tvClosesDate"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                style="@style/MyTextViewStyleForRainbowSubHeading"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top|right|center"
+                                android:text="@string/closeDate"
+                              />
+
+                        </LinearLayout>
+<!--                        <mehdi.sakout.fancybuttons.FancyButton-->
+<!--                            android:id="@+id/btnAddVote"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="10dp"-->
+<!--                            android:layout_marginRight="5dp"-->
+<!--                            android:paddingBottom="5dp"-->
+<!--                            android:paddingLeft="20dp"-->
+<!--                            android:paddingRight="20dp"-->
+<!--                            android:paddingTop="5dp"-->
+<!--                            fancy:fb_borderColor="#3b5998"-->
+<!--                            fancy:fb_borderWidth="1dp"-->
+<!--                            fancy:fb_defaultColor="#FFFFFF"-->
+<!--                            fancy:fb_focusColor="#5577bd"-->
+<!--                            fancy:fb_fontIconResource="&#xf0a6;"-->
+<!--                            fancy:fb_fontIconSize="15sp"-->
+<!--                            fancy:fb_iconPosition="right"-->
+<!--                            fancy:fb_radius="5dp"-->
+<!--                            fancy:fb_text="Vote"-->
+<!--                            fancy:fb_textColor="#3b5998" />-->
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/View"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="50dp"
+                        android:background="@color/viewcolor"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                      >
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/pollTvGroupName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+
+                            android:gravity="left|center_vertical"
+                            android:layout_marginRight="65dp"
+                            android:text="cnc"
+                            style="@style/MyTextViewStyleForRainbowSubHeading"/>
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/btnAddVote"
+                            android:layout_width="55dp"
+                            android:layout_height="26dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="0dp"
+                            android:textStyle="normal"
+                            android:background="@drawable/rouded_border_for_pay"
+                            android:gravity="center"
+                            android:text="view"
+                            android:textAllCaps="false"
+                            android:textColor="@color/ripplecolor"
+                            android:textSize="14sp"/>
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+
+        <layer-list>
+
+            <item
+                >
+                <shape>
+                    <gradient android:angle="90" android:endColor="#ffffff" android:startColor="#ffffff" android:type="linear" />
+
+                    <stroke android:width="1dp" android:color="@color/ripplecolor" />
+
+                    <corners android:radius="2dp" />
+
+                    <padding android:bottom="5dp" android:left="5dp" android:right="5dp" android:top="5dp" />
+                </shape>
+            </item>
+            <item android:width="@dimen/icon_size" android:height="@dimen/icon_size" android:gravity="end|center_vertical" android:drawable="@drawable/arrowdown" />
+            <!--            <item android:right="5dp"-->
+            <!--               >-->
+
+            <!--                <bitmap android:gravity="center_vertical|right"-->
+            <!--                    android:src="@drawable/arrowdown"-->
+            <!--                    />-->
+
+            <!--            </item>-->
+
+        </layer-list>
+
+    </item>
+
+</selector>

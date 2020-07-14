@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ForwardMsgActivity"
+    android:orientation="vertical"
+    android:id="@+id/replaceFrag">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contactToFrwd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null">
+    </androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:id="@+id/btnSendFrwdMsg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/contactToFrwd"
+        android:layout_alignEnd="@+id/contactToFrwd"
+        android:layout_margin="15dp"
+        android:onClick="OnclicksendMsg"
+        android:background="@drawable/fab_frwd_msg"
+        android:elevation="5dp"/>
+
+</RelativeLayout>

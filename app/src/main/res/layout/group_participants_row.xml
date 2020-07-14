@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/contactDp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/cardviewbordercolor"
+                android:layout_margin="5dp"/>
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/noImgText"
+                android:layout_margin="5dp"
+                android:background="@drawable/no_dp1"
+                android:visibility="invisible"
+                android:textSize="20dp"
+                style="@style/MyTextViewStyleForSubHeading"
+
+                android:textColor="@color/colorPrimary"
+                android:text="SP"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/selectedStatus"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignBottom="@+id/noImgText"
+                android:layout_alignEnd="@+id/noImgText"
+                android:layout_alignRight="@+id/noImgText"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/select_icon"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/contactName"
+                android:padding="3dp"
+                android:maxLines="1"
+                style="@style/MyTextViewStyleForHeading"
+                android:textColor="@color/colorPrimary"/>
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/contactFlatNo"
+                android:layout_below="@id/contactName"
+                android:padding="2dp"
+                style="@style/MyTextViewStyleForSubHeading"
+                android:maxLines="2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/status_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_admin"/>
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:textSize="10sp"
+                android:textColor="@color/ripplecolor"
+                android:text="@string/moderator"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/viewcolor"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="5dp"/>
+
+</LinearLayout>

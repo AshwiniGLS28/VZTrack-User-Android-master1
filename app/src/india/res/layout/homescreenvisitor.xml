@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+        android:id="@+id/NoVistorScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Welcome to VZTrack User"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/gpvch_black" />
+</LinearLayout>

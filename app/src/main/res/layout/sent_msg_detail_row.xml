@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="2dp">
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/flatNo"
+            android:padding="5dp"
+            style="@style/MyTextViewStyleForSubHeading"
+            android:text="F99"></vztrack.gls.com.vztrack_user.CustumView.CustomTextView>
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/readBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="Amit shah"
+            style="@style/MyTextViewStyleForRainbowSubHeading"
+            />
+
+        <ImageView
+            android:id="@+id/readStatusFalse"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@drawable/ic_doubletick_unseen"
+            android:visibility="gone"
+            android:padding="2dp"/>
+        <ImageView
+            android:id="@+id/readStatusTrue"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@drawable/ic_doubletick_seen"
+            android:visibility="gone"
+            android:padding="2dp" />
+    </LinearLayout>
+
+</RelativeLayout>

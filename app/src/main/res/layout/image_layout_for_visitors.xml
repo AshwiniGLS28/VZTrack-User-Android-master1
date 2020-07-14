@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/colorWhite"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+        android:id="@+id/tvNameAndNumber"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Photo Id"
+        style="@style/MyTextViewStyleForHeading"
+        android:textSize="@dimen/card_main_heading"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imgImage"
+        android:background="@color/colorWhite"
+        android:src="@drawable/ic_avatar_white"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:gravity="center"
+        android:onClick="ShowPhoto" />
+
+
+<!--    @drawable/image_background-->
+
+
+</LinearLayout>

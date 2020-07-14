@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="@dimen/card_margin_top"
+    android:layout_marginRight="@dimen/card_margin_top"
+    style="@style/VisitorCardViewStyle"
+    android:background="@drawable/visitorcardborder"
+    app:strokeColor="@color/cardviewbordercolor"
+    android:layout_marginBottom="@dimen/card_margin_top"
+    app:strokeWidth="1dp"
+    android:id="@+id/card_view"
+    >
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/card_view"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:padding="5dp"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/card_margin_top"-->
+<!--        android:layout_marginBottom="@dimen/card_margin_bottom"-->
+<!--        android:layout_marginLeft="@dimen/card_margin_left"-->
+<!--        android:layout_marginRight="@dimen/card_margin_right">-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/cardview_Linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+<!--            <vztrack.gls.com.vztrack_user.CustumView.CustumTextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Visit Purpose "-->
+<!--                android:textSize="18dp"-->
+<!--                android:layout_marginLeft="5dp"/>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Food"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    style="@style/MyTextViewStyleForHeading"
+                    android:id="@+id/tvPurpose"/>
+<!--                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--                    android:id="@+id/txincorrect"-->
+<!--                    style="@style/MyTextViewStyleForSmallText"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/redfilleddrawble"-->
+<!--                    android:foregroundGravity="center"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="Incorrect"-->
+<!--                    android:visibility="visible"-->
+<!--                    android:textColor="@color/nwwhite" />-->
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:id="@+id/txincorrect"
+                    style="@style/MyTextViewStyleForSmallText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/redfilleddrawble"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Incorrect"
+                    android:textColor="@color/nwwhite"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/tvDateAndTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/subtextcolor"
+                style="@style/MyTextViewStyleForRainbowSubHeading"
+                android:text="In Time"
+                android:layout_marginBottom="3dp"
+                android:layout_below="@+id/View1"/>
+
+        </LinearLayout>
+
+
+       
+
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="1px"
+            android:layout_marginBottom="1px"
+            android:layout_below="@+id/tvPurpose"
+            android:background="@color/viewcolor"/>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tvVehicleno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            style="@style/MyTextViewStyleForRainbowSubHeading"
+                            android:text="Vehicle Number"/>
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tvfrom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            style="@style/MyTextViewStyleForRainbowSubHeading"
+                            android:text="From"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/txtcount"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="fd"
+                            style="@style/MyTextViewStyleForRainbowSubHeading"
+                            android:gravity="right"
+                            android:visibility="visible"/>
+
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tvVisitors"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            style="@style/MyTextViewStyleForRainbowSubHeading"
+                            android:gravity="right"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+  
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="1px"
+            android:layout_marginBottom="1px"
+            android:layout_below="@+id/tvPurpose"
+            android:background="@color/viewcolor"/>
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/tvOutTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/subtextcolor"
+            style="@style/MyTextViewStyleForRainbowSubHeading"
+         />
+
+    </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/cardview_LinearText"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:gravity="center"-->
+<!--                android:visibility="gone">-->
+<!--                <vztrack.gls.com.vztrack_user.CustumView.CustumTextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Incorrect Entry"-->
+<!--                    android:textColor="@android:color/holo_red_dark"-->
+<!--                    android:textSize="22sp"/>-->
+<!--            </LinearLayout>-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imgIncorrectLable"-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:src="@drawable/lable"-->
+<!--                android:visibility="gone"/>-->
+
+        </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+

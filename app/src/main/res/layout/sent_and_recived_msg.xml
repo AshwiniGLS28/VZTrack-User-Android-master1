@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="5dp"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+    <RelativeLayout
+        android:id="@+id/sentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp">
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:background="@color/ripplecolor"
+            android:layout_alignParentRight="true"/>
+
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:background="@drawable/sent_cut"
+            android:layout_alignParentRight="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/sent_msg_bg"
+            android:padding="7dp"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:orientation="vertical">
+
+           <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/msgContentSend"
+                android:text="here?"
+                android:autoLink="web|email|phone"
+                android:linksClickable="true"
+               style="@style/MyTextViewStyleForSubHeading"
+                android:textColorLink="@color/colorWhite"/>
+
+
+            <LinearLayout
+                android:id="@+id/SentFileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:gravity="right">
+                        <ImageView
+                            android:id="@+id/imgFileSent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="1dp"
+                            android:src="@drawable/ic_file_image"
+                            android:visibility="invisible"/>
+                    </LinearLayout>
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvSentFileName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="2dp"
+                        android:text="this is a file a.txt"
+                        android:textColor="@color/colorWhite"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:maxLines="1"
+                        android:gravity="right"/>
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvSentFileSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="(2mb)"
+                        android:textColor="@color/colorWhite"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:gravity="right"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/imgSendFileInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/progressBarSent"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="100dp"
+                    android:minHeight="10dp"
+                    android:indeterminate="false"
+                    android:indeterminateTintMode="src_atop"
+                    android:indeterminateTint="@color/cyan_color"
+                    android:max="100"
+                    android:visibility="visible"/>
+
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:textSize="10sp"
+                    android:text="90%"
+                    style="@style/MyTextViewStyleForSubHeading"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/tvSentProgressPercent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 Jully 5:20"
+                    android:textColor="@color/colorWhite"
+                    android:paddingRight="7dp"
+                    android:id="@+id/msgDateSend"
+                    android:textSize="10sp"
+                    style="@style/MyTextViewStyleForSubHeading"
+                   />
+
+                <ImageView
+                    android:id="@+id/deliveryStatus"
+                    android:layout_width="10dp"
+                    android:layout_margin="3dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/sent" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/receivedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="40dp">
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:background="@color/pollcolor"/>
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:background="@drawable/receive_cut"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/receiver_msg_bg"
+            android:padding="7dp"
+            android:orientation="vertical"
+            android:gravity="left">
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="7dp"
+                android:textSize="10sp"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/msgReceivedSenderName"
+                style="@style/MyTextViewStyleForSubHeading"
+                android:textStyle="bold"/>
+
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:textColor="@color/subtextcolor"
+                android:id="@+id/msgContentReceived"
+
+                android:text="You Recived new message"
+                style="@style/MyTextViewStyleForSubHeading"
+                android:autoLink="web|email|phone"
+                android:linksClickable="true"
+                android:textColorLink="@color/cardviewbordercolor"/>
+
+
+            <LinearLayout
+                android:id="@+id/ReceivedFileLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:orientation="vertical"
+                android:gravity="start"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgFileReceived"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:padding="1dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:layout_margin="1dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:gravity="left">
+                        <ImageView
+                            android:id="@+id/imgReceivedDownloadIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_download_square"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvRecievedFileName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="2dp"
+                        android:text="this is a file a.txt"
+                        android:textColor="@color/colorWhite"
+
+                        android:maxLines="1"
+                        style="@style/MyTextViewStyleForSubHeading"/>
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvRecievedFileSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="(2mb)"
+                        android:textColor="@color/subtextcolor"
+
+                        style="@style/MyTextViewStyleForSubHeading"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/imgReceivedFileInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/progressBarRecieved"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="100dp"
+                    android:minHeight="10dp"
+                    android:indeterminate="false"
+                    android:indeterminateTintMode="src_atop"
+                    android:indeterminateTint="@color/cyan_color"
+                    android:max="100"
+                    android:visibility="visible"/>
+
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:textSize="10sp"
+                    android:text="90%"
+                    style="@style/MyTextViewStyleForSubHeading"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/tvRecievedProgressPercent"/>
+            </LinearLayout>
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5:20"
+                android:textColor="@color/subtextcolor"
+                android:paddingLeft="7dp"
+                android:textSize="10sp"
+                style="@style/MyTextViewStyleForSubHeading"
+                android:id="@+id/msgDateReceived"
+               />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

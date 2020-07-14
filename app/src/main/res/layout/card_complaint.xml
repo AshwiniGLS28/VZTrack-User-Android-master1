@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+        android:layout_marginBottom="@dimen/mtrl_card_spacing"
+        android:layout_marginRight="@dimen/mtrl_card_spacing"
+        style="@style/VisitorCardViewStyle"
+        android:background="@drawable/visitorcardborder"
+        app:strokeColor="@color/cardviewbordercolor"
+        app:strokeWidth="1dp"
+        android:id="@+id/card_view"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:orientation="horizontal">
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:padding="3dp">-->
+
+<!--                <View-->
+<!--                    android:id="@+id/viewColorBar"-->
+<!--                    android:layout_width="6dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginBottom="3dp"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_marginTop="3dp"-->
+<!--                    android:background="@color/colorButton" />-->
+
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+
+
+<!--                <View-->
+<!--                    android:id="@+id/View1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:layout_below="@+id/tvPurpose"-->
+<!--                    android:layout_marginBottom="2dp"-->
+<!--                    android:layout_marginTop="2dp"-->
+<!--                    android:background="@color/colorViewLong" />-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        style="@style/MyTextViewStyleForHeading"
+                        android:singleLine="true"
+                        android:text="Other"
+                        android:textStyle="bold" />
+<!--                    <mehdi.sakout.fancybuttons.FancyButton-->
+<!--                        android:id="@+id/btnCloseButton"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="end"-->
+<!--                        android:paddingBottom="5dp"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:paddingRight="20dp"-->
+<!--                        android:paddingTop="5dp"-->
+<!--                        android:gravity="right"-->
+<!--                        fancy:fb_borderWidth="1dp"-->
+<!--                        fancy:fb_defaultColor="#FFFFFF"-->
+<!--                        fancy:fb_focusColor="#5577bd"-->
+<!--                        fancy:fb_fontIconSize="15sp"-->
+<!--                        fancy:fb_iconPosition="right"-->
+<!--                        fancy:fb_radius="5dp"-->
+<!--                        fancy:fb_text="@string/compliant_status"-->
+<!--                        fancy:fb_textColor="#3b5998" />-->
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/btnCloseButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:textColor="@color/ripplecolor"
+                        android:text="@string/compliant_status"
+                        style="@style/MyTextViewStyleForSubHeading" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:padding="2dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/createdBy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:visibility="visible" />
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tvDate"
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:text="10 July 2017 " />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/layoutClosedByAndDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:visibility="visible">
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/btnCloseDisableButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:text="Close By : Admin on "
+                            android:textColor="@color/nwred"
+                            style="@style/MyTextViewStyleForSubHeading" />
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tvClosedDate"
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+
+                            android:text="10 July 2017 "
+                            android:textColor="@color/nwred" />
+
+
+                    </LinearLayout>
+
+                                    <View
+                                        android:id="@+id/View1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_below="@+id/tvPurpose"
+                                        android:layout_marginBottom="2dp"
+                                        android:layout_marginTop="2dp"
+                                        android:background="@color/cardviewbordercolor" />
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                      android:layout_margin="2dp"
+                        style="@style/MyTextViewStyleForRainbowSubHeading"
+                        android:text="hdc"
+                        android:layout_weight="1"
+                        android:maxLines="2"
+                        android:ellipsize="end"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+

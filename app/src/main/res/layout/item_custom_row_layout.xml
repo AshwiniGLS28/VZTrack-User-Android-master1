@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="5dp"
+    app:rippleColor="@color/pollcolor"
+    android:clickable="true"
+    android:id="@+id/llmaterialcardview"
+    app:contentPadding="5dp">
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+        android:background="?attr/selectableItemBackground"
+        android:id="@+id/lldrawergrid"
+            android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/ic_notification"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/notification_indicator"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:id="@+id/imgmenu"
+                android:layout_height="30dp"
+                android:src="@drawable/nw_visitor" />
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/item_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:paddingTop="5dp"
+                style="@style/MyTextViewStyleForSubHeading"
+                android:textColor="@color/ripplecolor"
+                 />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>

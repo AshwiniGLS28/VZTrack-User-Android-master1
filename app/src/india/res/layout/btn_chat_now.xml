@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="chat"
+    android:padding="5dp"
+android:clickable="true"
+    android:gravity="center"
+    android:background="@drawable/rounded_button_ripplecolor"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto">
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etSubmit"
+        android:onClick="chat"
+        android:padding="3dp"
+style="@style/MyTextViewStyleForSubHeading"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        android:text="Chat now"/>
+    <ImageView
+        android:layout_width="20dp"
+        android:src="@drawable/chat_now_icon"
+        android:onClick="chat"
+        android:clickable="true"
+        android:layout_height="20dp"/>
+
+
+
+<!--    <mehdi.sakout.fancybuttons.FancyButton-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:paddingBottom="5dp"-->
+<!--        android:paddingLeft="5dp"-->
+<!--        android:paddingRight="5dp"-->
+<!--        android:paddingTop="5dp"-->
+<!--        fancy:fb_borderColor="@color/colorPrimaryDark"-->
+<!--        fancy:fb_borderWidth="1dp"-->
+<!--        fancy:fb_defaultColor="#FFFFFF"-->
+<!--        fancy:fb_focusColor="@color/colorViewLong"-->
+<!--        fancy:fb_radius="3dp"-->
+<!--        fancy:fb_text="  Chat Now   "-->
+<!--        fancy:fb_fontIconResource="&#xf1d7;"-->
+<!--        fancy:fb_iconPosition="right"-->
+<!--        fancy:fb_textColor="@color/colorPrimaryDark"/>-->
+
+</LinearLayout>

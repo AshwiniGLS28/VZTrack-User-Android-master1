@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_create_message"
+            android:icon="@drawable/ic_message"
+            android:title="@string/createMessage"/>
+
+        <item
+            android:id="@+id/nav_create_notice"
+            android:icon="@drawable/ic_menu_notice"
+            android:title="@string/createNotice"/>
+
+        <item
+            android:id="@+id/nav_create_complaint"
+            android:icon="@drawable/ic_info_outline"
+            android:title="@string/createComplaint"/>
+
+        <item
+            android:id="@+id/nav_create_poll"
+            android:icon="@drawable/ic_poll"
+            android:title="@string/createPoll"/>
+
+        <item
+            android:id="@+id/nav_back"
+            android:icon="@drawable/ic_keyboard_arrow_left"
+            android:title="Back To Menu"/>
+
+    </group>
+
+</menu>

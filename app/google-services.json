@@ -1,0 +1,112 @@
+{
+  "project_info": {
+    "project_number": "1082591809215",
+    "firebase_url": "https://vztrack-1205.firebaseio.com",
+    "project_id": "vztrack-1205",
+    "storage_bucket": "vztrack-1205.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082591809215:android:858a708b23f8309e",
+        "android_client_info": {
+          "package_name": "vztrack.gls.com.vztrack_user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082591809215-ki3lla0c5dt473du0kqg5i7h19rjob1q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vztrack.gls.com.vztrack_user",
+            "certificate_hash": "6619564e6812888deb862447967b752bb8a4672b"
+          }
+        },
+        {
+          "client_id": "1082591809215-lo1clt00842d8pqhoiular3at8kcqs1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMm-8SqjTR4N7jy1OF-qQtoi20VnZdIfY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082591809215:android:a90f5d5fb85bf4c1",
+        "android_client_info": {
+          "package_name": "vztrack.gls.com.vztrack_user.kenya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082591809215-lo1clt00842d8pqhoiular3at8kcqs1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMm-8SqjTR4N7jy1OF-qQtoi20VnZdIfY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082591809215:android:e47645ddabd0114e",
+        "android_client_info": {
+          "package_name": "vztrack.gls.com.vztracksociety"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082591809215-lo1clt00842d8pqhoiular3at8kcqs1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMm-8SqjTR4N7jy1OF-qQtoi20VnZdIfY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

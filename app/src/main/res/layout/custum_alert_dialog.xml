@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:background="@color/colorWhite"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtalertheading"
+        android:text="ABC"
+
+        style="@style/MyTextViewStyleForHeading"
+        ></vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium>
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/viewcolor"/>-->
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MyTextViewStyleForSubHeading"
+        android:id="@+id/txtalertsubheading"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        ></vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnegative"
+            android:layout_margin="5dp"
+            style="@style/MyTextViewStyleForHeading"
+            android:padding="7dp"
+            android:text="Cancel"
+            />
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnpositive"
+            android:padding="7dp"
+            style="@style/MyTextViewStyleForHeading"
+            android:layout_margin="5dp"
+            android:text="Ok"
+            ></vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium>
+
+    </LinearLayout>
+
+
+</LinearLayout>

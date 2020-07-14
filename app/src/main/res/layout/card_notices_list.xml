@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+        android:layout_marginTop="@dimen/mtrl_card_spacing"
+        android:layout_marginRight="@dimen/mtrl_card_spacing"
+        style="@style/VisitorCardViewStyle"
+        android:background="@drawable/visitorcardborder"
+        app:strokeColor="@color/cardviewbordercolor"
+        app:strokeWidth="1dp"
+        android:id="@+id/card_view"
+        >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/no_photo_icon"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/cardviewbordercolor"
+                    android:id="@+id/imgIcon" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="5dp">
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvNoticeTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:text="dngfhsdf"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        style="@style/MyTextViewStyleForHeading"
+                       />
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:layout_marginBottom="5dp"
+                        android:text="hjfjhf"
+                        android:layout_below="@+id/tvNoticeTitle"
+                        android:layout_marginRight="5dp"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+

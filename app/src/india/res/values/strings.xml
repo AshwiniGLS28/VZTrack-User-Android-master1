@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="app_name">VZTrack</string>
+    <string name="title">VZTrack</string>
+<!--    <string name="title">Shalimar</string>-->
+    <string name="website">www.vztrack.net/</string>
+    <string name="email_id">sales@vztrack.in</string>
+    <string name="mobile_number">+91 9075016367</string>
+
+    <string name="price_sym">₹</string>
+
+    <string name="app_link">https://play.google.com/store/apps/details?id=vztrack.gls.com.vztrack_user&amp;hl=en</string>
+
+    <string name="no_store_text">As of now, we do not have any stores listed against your society. If you wish to see any nearby stores here, write to us on support@vztrack.in</string>
+    <string name="tenant_contact_emailId">support@vztrack.in</string>
+    <string name="approve">Approve</string>
+    <string name="deny">Deny</string>
+    <string name="approvedby">Approved by</string>
+    <string name="VZTrack">VZTrack</string>
+    <string name="meetsafe">#meetSafe</string>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/spinnerpreapprovaldropdown"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:layout_margin="2dp"
+        android:padding="3dp"
+        android:gravity="center_vertical"
+        android:text="Hi"
+        android:textColor="@color/colorPrimary"
+        style="@style/MyTextViewStyleForSpinnerdropdown"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/dark_gray"></TextView>
+
+</LinearLayout>

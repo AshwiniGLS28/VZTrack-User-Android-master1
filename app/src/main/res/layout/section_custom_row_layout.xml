@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:paddingLeft="5dp"
+   >
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        style="@style/MyTextViewStyleForSubHeading"
+        android:textColor="@color/tabcolor"
+        android:layout_marginBottom="2dp"
+        android:textSize="14sp" />
+
+    <!--  recycler view for items -->
+  <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/section_label"
+        />
+</RelativeLayout>

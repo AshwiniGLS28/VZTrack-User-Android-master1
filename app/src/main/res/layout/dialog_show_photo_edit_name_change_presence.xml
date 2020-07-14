@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout">
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose"
+        style="@style/MyTextViewStyleForHeading"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/photoProfile"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:id="@+id/updateName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:layout_marginRight="5dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColorHint="@color/gray">-->
+
+<!--                    <androidx.appcompat.widget.AppCompatEditText-->
+<!--                        android:id="@+id/etFirstName"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="@dimen/padding_margin"-->
+<!--                        android:textSize="@dimen/text_size_15sp"-->
+<!--                        android:textColor="@color/dark_gray"-->
+<!--                        android:hint="First Name"/>-->
+<!--                    -->
+<!--                    -->
+<!--                    -->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+                    android:id="@+id/etFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_margin"
+                    style="@style/MyTextViewStyleForEdittext"
+                    android:hint="First Name"/>
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:layout_marginRight="5dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColorHint="@color/gray">-->
+
+<!--                    <androidx.appcompat.widget.AppCompatEditText-->
+<!--                        android:id="@+id/etLastName"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="@dimen/padding_margin"-->
+<!--                        android:textSize="@dimen/text_size_15sp"-->
+<!--                        android:textColor="@color/dark_gray"-->
+<!--                        android:hint="Last Name" />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+                    android:id="@+id/etLastName"
+                    style="@style/MyTextViewStyleForEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last Name"
+                    android:paddingLeft="@dimen/padding_margin" />
+
+                <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="9dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorWhite"
+                    android:paddingTop="9dp"
+                    android:background="@drawable/rounded_button"
+                android:text="Update"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/updatePresence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imgOnline"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/status_bg" />
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvOnline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:text="Mobile Online"></vztrack.gls.com.vztrack_user.CustumView.CustomTextView>
+
+
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/gray"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imgAway"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/status_bg" />
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvAway"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Away"
+                        style="@style/MyTextViewStyleForSubHeading"/>
+
+
+
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/gray"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imgInvisible"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/status_bg" />
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvInvisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Offline"
+                        style="@style/MyTextViewStyleForSubHeading"/>
+
+
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/gray"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imgDnd"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/status_bg" />
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvDnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Do Not Disturb"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

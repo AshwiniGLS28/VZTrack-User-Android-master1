@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/card_margin_top"
+    android:layout_marginBottom="@dimen/card_margin_top"
+    android:layout_marginRight="@dimen/card_margin_top"
+    style="@style/VisitorCardViewStyle"
+    android:background="@drawable/visitorcardborder"
+    app:strokeColor="@color/cardviewbordercolor"
+    app:strokeWidth="1dp"
+    android:id="@+id/card_view">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<RelativeLayout
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/vehicleType"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"/>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_weight="1">-->
+<!--       -->
+<!--    </LinearLayout>-->
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_toRightOf="@+id/vehicleType"
+       android:id="@+id/llvehicleno"
+
+       android:orientation="vertical">
+
+       <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+           android:id="@+id/vehicleNumber"
+           style="@style/MyTextViewStyleForHeading"
+           android:layout_width="match_parent"
+           android:layout_height="30dp"
+           android:layout_marginLeft="5dp"
+           android:layout_weight="1"
+           android:gravity="center|left"
+           android:text="MH12 AC1234"
+           android:textStyle="bold" />
+
+       <View
+           android:layout_width="match_parent"
+           android:background="@color/viewcolor"
+           android:layout_height="1dp"></View>
+   </LinearLayout>
+
+
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/txtparkingNo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            style="@style/MyTextViewStyleForSubHeading"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:layout_below="@+id/llvehicleno"
+            android:text="MH12 AC1234"/>
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/txtparkingType"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            style="@style/MyTextViewStyleForSubHeading"
+            android:layout_weight="1"
+            android:layout_below="@+id/txtparkingNo"
+            android:gravity="center|left"
+            android:text="MH12 AC1234"/>
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/txtparkingstickerNo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            style="@style/MyTextViewStyleForSubHeading"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/txtparkingType"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="MH12 AC1234"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/txtparkingstickerNo"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/txtparkinglevel"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                style="@style/MyTextViewStyleForSubHeading"
+                android:gravity="center|left"
+                android:text="MH12 AC1234"/>
+            <ImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:src="@drawable/ic_delete_24px"/>
+        </LinearLayout>
+
+</RelativeLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+</LinearLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+            android:layout_marginTop="@dimen/mtrl_card_spacing"
+            android:layout_marginRight="@dimen/mtrl_card_spacing"
+            style="@style/VisitorCardViewStyle"
+            android:background="@drawable/visitorcardborder"
+            app:strokeColor="@color/cardviewbordercolor"
+            app:strokeWidth="1dp"
+            android:id="@+id/card_view"
+
+        >
+<!--            android:alpha="0.2"-->
+
+            <LinearLayout
+                android:id="@+id/cardview_Linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@color/cardviewbordercolor"
+                        android:src="@drawable/no_photo_icon"
+                        android:alpha="0.3"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginRight="15dp"
+                        android:orientation="vertical">
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            style="@style/MyTextViewStyleForHeading"
+                            android:text="Name"></vztrack.gls.com.vztrack_user.CustumView.CustomTextView>
+
+<!--                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--                            android:id="@+id/tvDescription"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:ellipsize="end"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:singleLine="true"-->
+<!--                            android:text="here is prod or serv desc"-->
+<!--                            android:textColor="@color/colorBlack"-->
+<!--                            android:textSize="@dimen/card_sub_heading1" />-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                                android:id="@+id/tvPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:text="@string/price"
+                                style="@style/MyTextViewStyleForSubHeading"></vztrack.gls.com.vztrack_user.CustumView.CustomTextView>
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="25dp"-->
+<!--                                android:layout_height="25dp"-->
+<!--                                android:layout_marginLeft="5dp"-->
+<!--                                android:src="@drawable/ic_action_tag" />-->
+
+
+
+                        </LinearLayout>
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tvMobileNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:textColor="@color/colorPrimary"
+                            android:text="8988525"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/viewcolor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvPostedBy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:gravity="center_vertical"
+                        android:text="@string/flatNumber"/>
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imgCall"-->
+<!--                        android:layout_width="25dp"-->
+<!--                        android:layout_height="25dp"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:src="@drawable/ic_action_phone_start" />-->
+                    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                        android:id="@+id/tvType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/MyTextViewStyleForSubHeading"
+                        android:text="Service"/>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/tvResone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Closed"
+            style="@style/MyTextViewStyleForHeading"
+            android:textColor="@color/red"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

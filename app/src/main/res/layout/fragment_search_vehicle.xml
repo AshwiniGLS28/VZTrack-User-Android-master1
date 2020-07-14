@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:focusableInTouchMode="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:layout_margin="5dp"
+
+       android:orientation="horizontal"
+      >
+
+      <vztrack.gls.com.vztrack_user.CustumView.CustomEdittext
+          android:id="@+id/vehicleNumber"
+          android:layout_width="match_parent"
+          android:background="@drawable/edittext_background_other"
+          style="@style/MyTextViewStyleForEdittextripplecolor"
+          android:layout_height="wrap_content"
+          android:inputType="textCapCharacters"
+          android:hint="Enter Vehicle Number "
+          android:padding="5dp"
+          android:layout_weight="0.3"/>
+
+<!--      <ImageView-->
+<!--          android:id="@+id/searchIcon"-->
+<!--          android:layout_width="wrap_content"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:layout_marginLeft="10dp"-->
+<!--          android:src="@drawable/ic_action_search"/>-->
+       <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+           android:layout_width="match_parent"
+           android:id="@+id/searchIcon"
+           android:background="@drawable/btn_drawablle_withminborder"
+           android:text="@string/search"
+           android:layout_weight="0.7"
+           android:layout_marginLeft="10dp"
+           android:textAllCaps="false"
+           android:layout_marginRight="5dp"
+           android:textColor="@color/colorWhite"
+           android:layout_height="35dp"/>
+
+   </LinearLayout>
+
+<!--   <View-->
+<!--       android:id="@+id/View1"-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:layout_height="1dp"-->
+<!--       android:layout_marginBottom="5dp"-->
+<!--       android:layout_below="@+id/tvPurpose"-->
+<!--       android:background="@color/colorViewLong"/>-->
+
+    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+        android:id="@+id/res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:gravity="center"
+        style="@style/MyTextViewStyleForSubHeading"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:text="Searched result for 'MH12AC1234'"/>
+
+<!--   <androidx.cardview.widget.CardView-->
+<!--       android:id="@+id/card_view"-->
+<!--       android:layout_gravity="center"-->
+<!--       android:layout_width="fill_parent"-->
+<!--       android:layout_height="wrap_content"-->
+<!--       android:layout_marginLeft="5dp"-->
+<!--       android:layout_marginRight="5dp">-->
+
+<!--         <LinearLayout-->
+<!--             android:id="@+id/cardview_Linear"-->
+<!--             android:layout_width="match_parent"-->
+<!--             android:layout_height="wrap_content"-->
+<!--             android:orientation="vertical"-->
+<!--             android:gravity="center"-->
+<!--             android:padding="3dp">-->
+
+<!--               <TextView-->
+<!--                   android:layout_width="wrap_content"-->
+<!--                   android:layout_height="wrap_content"-->
+<!--                   android:gravity="center"-->
+<!--                   android:text="Vehicle Details"-->
+<!--                   android:textSize="16dp"-->
+<!--                   android:layout_marginLeft="5dp"/>-->
+
+<!--         </LinearLayout>-->
+<!--   </androidx.cardview.widget.CardView>-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searched_vehicle_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/card_margin_top"
+        android:scrollbars="vertical" />
+
+<!--    <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--       android:id="@+id/noResultLayout"-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:layout_height="match_parent"-->
+<!--       android:gravity="center"-->
+<!--       android:layout_marginBottom="10dp"-->
+<!--       android:layout_marginLeft="10dp"-->
+<!--       android:layout_marginRight="10dp"-->
+<!--       android:textSize="@dimen/text_size_15sp"-->
+<!--       android:padding="10dp"-->
+<!--       android:text="No result found"/>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noImageDataLayout"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:src="@drawable/nodataimage"
+            android:id="@+id/imgnodata"/>
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:text="No result found"
+            style="@style/MyTextViewStyleForHeading"
+            android:id="@+id/noResultLayout"/>
+    </LinearLayout>
+
+
+</LinearLayout>

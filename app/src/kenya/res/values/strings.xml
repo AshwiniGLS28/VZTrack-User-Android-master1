@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">VZTrack Kenya</string>
+    <string name="title">VZTrack Kenya</string>
+
+    <string name="website">www.vztrack.co.ke</string>
+    <string name="email_id">info@vztrack.co.ke</string>
+    <string name="mobile_number">+254 722 540620</string>
+
+    <string name="price_sym">Sh</string>
+
+    <string name="app_link">https://play.google.com/store/apps/details?id=vztrack.gls.com.vztracksociety_kenya</string>
+
+    <string name="no_store_text">As of now, we do not have any stores listed against your society. If you wish to see any nearby stores here, write to us on info@vztrack.co.ke</string>
+
+</resources>

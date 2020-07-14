@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/edittext_bottomline_cardviewcolor"
+    android:textStyle="bold"
+    style="@style/MyTextViewStyleForHeading"
+  />

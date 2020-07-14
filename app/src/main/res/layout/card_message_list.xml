@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/card_margin_top"
+        android:layout_marginRight="@dimen/card_margin_top"
+        android:layout_marginBottom="@dimen/card_margin_top"
+        style="@style/VisitorCardViewStyle"
+        android:background="@drawable/visitorcardborder"
+        app:strokeColor="@color/cardviewbordercolor"
+        app:strokeWidth="1dp"
+        android:id="@+id/card_view"
+        >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="3dp">
+
+<!--                <View-->
+<!--                    android:id="@+id/viewColorBar"-->
+<!--                    android:layout_width="14dp"-->
+<!--                    android:layout_height="42dp"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_marginTop="3dp"-->
+<!--                    android:layout_marginBottom="3dp"-->
+<!--                    android:background="@color/colorButton" />-->
+
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp">
+
+<!--                        <com.ms.square.android.expandabletextview.ExpandableTextView-->
+<!--                            xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"-->
+<!--                            android:id="@+id/expand_text_view"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            style="@style/MyTextViewStyleForHeading"-->
+<!--                            expandableTextView:maxCollapsedLines="2"-->
+<!--                            expandableTextView:animDuration="200">-->
+<!--                            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView-->
+<!--                                android:id="@id/expandable_text"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:maxLength="500"-->
+<!--                                style="@style/MyTextViewStyleForHeading"-->
+<!--                                android:inputType="textCapSentences|textMultiLine"-->
+<!--                                android:autoLink="web|email|phone"-->
+<!--                                android:linksClickable="true"-->
+<!--                                android:textColorLink="@color/colorPrimary"/>-->
+<!--                            <ImageButton-->
+<!--                                android:id="@id/expand_collapse"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:padding="16dp"-->
+<!--                                android:layout_gravity="right|bottom"-->
+<!--                                android:background="@android:color/transparent"/>-->
+<!--                        </com.ms.square.android.expandabletextview.ExpandableTextView>-->
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:layout_width="match_parent"
+                            android:id="@+id/expand_text_view"
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_height="wrap_content"
+                            android:linksClickable="true"
+                            android:autoLink="web|email|phone"
+                            android:textColorLink="@color/link_color"
+                            ></vztrack.gls.com.vztrack_user.CustumView.CustomTextView>
+                    </LinearLayout>
+
+<!--                    <View-->
+<!--                        android:id="@+id/View1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:layout_marginTop="2dp"-->
+<!--                        android:layout_marginBottom="2dp"-->
+<!--                        android:background="@color/colorView"/>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/View1">
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tvGroupName"
+                            style="@style/MyTextViewStyleForSubHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Group" />
+
+                        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                            android:id="@+id/tvMessageDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            style="@style/MyTextViewStyleForSTooltip"
+                            android:gravity="right|center_vertical|top"
+
+                            android:text="2016-03-15"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

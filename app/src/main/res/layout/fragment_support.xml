@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <vztrack.gls.com.vztrack_user.CustumView.CustomTextViewMedium
+       android:id="@+id/tvTitle"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:textStyle="bold"
+       android:layout_marginTop="20dp"
+       style="@style/MyTextViewStyleForHeading"
+       android:text="Happy To Help You ! "/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:src="@drawable/support_chat_happy"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+     />
+
+
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:id="@+id/card_view_faq"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="5dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:layout_marginBottom="5dp">-->
+
+        <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+            android:id="@+id/tvFaq"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:clickable="true"
+            android:background="@drawable/rounded_button_ripplecolor"
+            android:layout_margin="10dp"
+            android:textColor="@color/colorWhite"
+            style="@style/MyTextViewStyleForHeading"
+            android:gravity="center"
+            android:text="FAQs"/>
+
+<!--    </com.google.android.material.card.MaterialCardView>-->
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--       android:id="@+id/card_view_feedback"-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:layout_height="wrap_content"-->
+<!--       android:padding="5dp"-->
+<!--       android:layout_marginLeft="10dp"-->
+<!--       android:layout_marginRight="10dp"-->
+<!--       style="@style/VisitorCardViewStyle"-->
+<!--       android:background="@drawable/visitorcardborder"-->
+<!--        android:visibility="gone"-->
+<!--       app:strokeColor="@color/cardviewbordercolor"-->
+<!--       app:strokeWidth="1dp">-->
+         <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+             android:id="@+id/tvFeedback"
+             android:layout_width="match_parent"
+             android:layout_height="36dp"
+             android:layout_margin="10dp"
+             android:clickable="true"
+             android:background="@drawable/rounded_button_ripplecolor"
+
+             android:textColor="@color/colorWhite"
+             style="@style/MyTextViewStyleForHeading"
+
+             android:gravity="center"
+             android:text="Feedback/Queries"
+             android:visibility="gone"/>
+<!--    </com.google.android.material.card.MaterialCardView>-->
+
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:id="@+id/card_view_contact"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="5dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        style="@style/VisitorCardViewStyle"-->
+<!--        android:background="@drawable/visitorcardborder"-->
+<!--        app:strokeColor="@color/cardviewbordercolor"-->
+<!--        app:strokeWidth="1dp">-->
+
+            <vztrack.gls.com.vztrack_user.CustumView.CustomTextView
+                android:id="@+id/tvContact"
+                android:layout_width="match_parent"
+
+                android:layout_height="36dp"
+                android:clickable="true"
+                style="@style/MyTextViewStyleForHeading"
+                android:background="@drawable/rounded_button_ripplecolor"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:text="Contact us"/>
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+    <include layout="@layout/btn_chat"/>
+
+  </LinearLayout>

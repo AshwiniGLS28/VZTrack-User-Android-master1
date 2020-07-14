@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@color/colorWhite"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+    <ImageView
+        android:layout_width="@dimen/icon_size"
+        android:id="@+id/imgskip"
+        android:layout_gravity="right"
+        android:paddingTop="5dp"
+        android:onClick="skipManual"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/ic_clear_24px"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginBottom="60dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/SliderDots"
+            android:layout_below="@+id/viewPager"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <vztrack.gls.com.vztrack_user.CustumView.CustomButton
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/rounded_button"
+                android:id="@+id/btnskip"
+                android:onClick="skipManual"
+                android:text="SKIP"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</FrameLayout>
